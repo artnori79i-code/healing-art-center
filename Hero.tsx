@@ -7,18 +7,16 @@ const KAKAO_URL = "https://invite.kakao.com/tc/yBbJA8619b";
 const BLOG_URL = "https://blog.naver.com/healingarter";
 
 const GRID_ITEMS = [
-  { id: 1, url: "/images/hero_new_2.png" },
-  { id: 2, url: "/images/hero_new_3.jpg" },
-  { id: 3, url: "/images/hero_new_4.jpg" },
-  { id: 4, url: "/images/hero_new_5.jpg" },
-  { id: 5, url: "/images/hero_v2_1.jpg" },
-  { id: 6, url: "/images/hero_v2_2.jpg" },
-  { id: 7, url: "/images/hero_v2_4.jpg" },
-  { id: 8, url: "/images/hero_v3_3.png" },
-  { id: 9, url: "/images/hero_v3_4.png" },
-  { id: 10, url: "/images/hero_v3_5.png" },
-  { id: 11, url: "/images/hero_v3_6.png" },
-  { id: 12, url: "/images/hero_v6_1.jpg" }
+  { id: 1, url: "/images/hero_v7/h1.png" },
+  { id: 2, url: "/images/hero_v7/h2.png" },
+  { id: 3, url: "/images/hero_v7/h3.png" },
+  { id: 4, url: "/images/hero_v7/h4.png" },
+  { id: 5, url: "/images/hero_v7/h5.jpg" },
+  { id: 101, url: "/images/hero_v7/h1.png" },
+  { id: 102, url: "/images/hero_v7/h2.png" },
+  { id: 103, url: "/images/hero_v7/h3.png" },
+  { id: 104, url: "/images/hero_v7/h4.png" },
+  { id: 105, url: "/images/hero_v7/h5.jpg" }
 ].map(item => ({
   ...item,
   url: item.url.startsWith('/') ? item.url : `${item.url}?q=80&w=500&h=500&auto=format&fit=crop`
