@@ -120,7 +120,7 @@ export const PROGRAMS: Program[] = [
         sessions: "8~10회",
         participants: "8명 내외",
         content: "전문 예술치료사와 음악치료사가 정교하게 설계한 예술적 여정을 통해 마음의 깊은 결을 어루만집니다. 억눌려 있던 감정을 선율과 색채로 풀어내며 정서적 안정을 회복하고, 심리적 회복탄력성을 높여 흔들리는 일상 속에서도 스스로를 단단하게 지탱할 수 있는 마음의 중심을 세워주는 심도 깊은 예술 치유 프로젝트입니다.",
-        image: "/images/healing_program_1.jpg"
+        image: "/images/healing_program_v2_1.jpg"
       },
       {
         id: "h2",
