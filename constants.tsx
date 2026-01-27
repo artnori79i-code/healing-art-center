@@ -37,16 +37,16 @@ export const PROGRAMS: Program[] = [
         title: "병영문화예술체험교육 (체험형)",
         sessions: "8회기 이상",
         participants: "20명 내외",
-        content: "악기 연주 기초부터 합주까지, 장병들이 직접 음악팀을 구성하고 연습할 수 있도록 전문가가 밀착 지도합니다. 책임감과 협동심을 기를 수 있는 장기 교육 과정입니다. 병영문화생활의 복지를 향상 합니다! <br/><br/><b class='text-red-600 font-bold'>* 힐링예술터는 15년간의 군장병 문화예술교육 기획으로 군장병들의 니즈와 선호도를 잘 파악하고 있고 이에 맞춰 교육을 진행해 참여율이 굉장히 높습니다^^!</b>",
-        image: "/images/army_program_2.jpg"
+        content: "악기 연주 기초부터 합주까지, 장병들이 직접 음악팀을 구성하고 연습할 수 있도록 전문가가 밀착 지도합니다. 책임감과 협동심을 기를 수 있는 장기 교육 과정입니다. 병영문화생활의 복지를 향상 합니다! <br/><br/><span class='text-spangle-box'>* 힐링예술터는 15년간의 군장병 문화예술교육 기획으로 군장병들의 니즈와 선호도를 잘 파악하고 있고 이에 맞춰 교육을 진행해 참여율이 굉장히 높습니다^^!</span>",
+        image: "/images/army_program_1.png?v=3"
       },
       {
         id: "d2",
         title: "군장병 문화예술교육",
         sessions: "단기/중장기",
         participants: "전 장병",
-        content: "매주 1회씩 문화예술교육을 진행합니다! 부대 일정에 맞춰 5주차 미만, 10주차 미만, 중장기 교육을 진행합니다! 병영 생활에 활력을 불어넣습니다. 장병들과 가까이서 호흡하는 예술교육입니다. <br/><br/><b class='text-red-600 font-bold'>부대에서 2년 연속 매해 신청할 정도로 재참여율 및 신청률이 높습니다!</b>",
-        image: "/images/army_program_1.png"
+        content: "매주 1회씩 문화예술교육을 진행합니다! 부대 일정에 맞춰 5주차 미만, 10주차 미만, 중장기 교육을 진행합니다! 병영 생활에 활력을 불어넣습니다. 장병들과 가까이서 호흡하는 예술교육입니다. <br/><br/><span class='text-spangle-box'>부대에서 2년 연속 매해 신청할 정도로 재참여율 및 신청률이 높습니다!</span>",
+        image: "/images/army_program_2.jpg?v=3"
       },
       {
         id: "d3",
@@ -54,7 +54,7 @@ export const PROGRAMS: Program[] = [
         sessions: "1일 4시간",
         participants: "50~200명 내외",
         content: "일일 체험형 예술을 매개로 자기 이해와 타인 공감을 실천하는 소통 중심 워크숍입니다. 본 활동은 장병 상호 간의 유대를 강화하고 악기를 통해 스트레스를 해소하는 시간입니다.",
-        image: "/images/army_program_3.jpg"
+        image: "/images/army_program_3.png"
       },
       {
         id: "d4",
@@ -75,11 +75,11 @@ export const PROGRAMS: Program[] = [
     subPrograms: [
       {
         id: "m1",
-        title: "전문 악기 마스터 공연 클래스",
+        title: "고품격 문화예술교육 워크샵",
         sessions: "주 1회 (상시)",
         participants: "기관협의",
-        content: "단순한 기술 습득을 넘어, 악기와 연주자가 하나의 호흡으로 연결되는 몰입의 시간을 선사합니다. 음악 전공 강사진의 1:1 맞춤 지도를 통해 섬세한 테크닉부터 깊이 있는 예술적 해석까지 마스터하며, 자신만의 독창적인 음악적 언어를 발견하고 공연으로 완성하는 비약적인 성장을 경험하는 최고급 전문 교육 과정입니다.",
-        image: "/images/arts_program_1.jpg"
+        content: "의뢰하신 기업 및 기관의 특성과 워크숍 주제에 따라 섬세하게 기획되는 맞춤형 문화예술교육입니다. 예술의 힐링 요소를 깊이 있게 결합하여 조직의 '단합, 화합, 성취감'을 예술적 감수성과 치유적 에너지로 승화시킵니다. 조직 실정에 맞는 창의적 커리큘럼을 통해 구성원 모두가 예술적 하모니 속에서 진정한 연대와 내면의 회복을 경험하며, 일상에 새로운 영감과 활력을 불어넣는 프리미엄 문화예술 솔루션입니다.",
+        image: "/images/workshop_program.png"
       },
       {
         id: "m2",
@@ -95,7 +95,7 @@ export const PROGRAMS: Program[] = [
         sessions: "단기/중장기",
         participants: "학교 및 기관협의",
         content: "서로 다른 우리가 만나 하나의 거대한 하모니를 이루는 과정 속에서 소통의 진정한 의미를 배웁니다. 놀이+악기합주가 결합된 프로그램입니다. 또래 친구들과 악기를 통해 대화하며 타인의 소리에 귀 기울이는 법을 익히고, 공감의 깊이를 더해가며 음악적 완성도뿐만 아니라 다양한 색깔 놀이와 더불어 공동체 의식과 자아존중감을 높여주는 아동 및 청소년 맞춤형 앙상블 프로젝트입니다.",
-        image: "/images/arts_program_3.jpg"
+        image: "/images/arts_program_3.jpg?v=2"
       },
       {
         id: "m4",
@@ -103,7 +103,7 @@ export const PROGRAMS: Program[] = [
         sessions: "협의 가능",
         participants: "학교 및 기관협의",
         content: "지리적 경계와 환경적 제약에 구애받지 않고, 예술의 향기가 필요한 모든 곳으로 전문 교육의 빛을 전합니다. 힐링예술터의 독보적인 커리큘럼을 지닌 강사진이 직접 현장을 방문하여 누구나 고품격 예술 복지를 누릴 수 있도록 지원하며, 일상을 특별한 예술 무대로 변화시키는 따뜻하고 혁신적인 교육 서비스입니다.",
-        image: "/images/arts_program_4.jpg"
+        image: "/images/arts_program_4.jpg?v=2"
       }
     ]
   },
@@ -144,7 +144,7 @@ export const PROGRAMS: Program[] = [
         sessions: "8회기 내외",
         participants: "기관협의",
         content: "복지관과 센터의 소중한 회원 및 직원들을 위해 설계된 고품격 예술 복지 서비스입니다. 음악과 다감각 예술 활동을 결합하여 자존감을 단단히 높이고, 흩어진 집중력을 선율 위로 모으는 창의적인 경험을 선사합니다. 함께 마음을 나누는 과정을 통해 사회적 고립감을 해소하고, 개개인의 삶에 반짝이는 예술적 활력과 긍정적인 자아 정체성을 선물하는 따뜻한 치유의 시간입니다.",
-        image: "/images/healing_program_4.jpg"
+        image: "/images/healing_program_4_new.jpg"
       }
     ]
   },
@@ -181,11 +181,11 @@ export const PROGRAMS: Program[] = [
       },
       {
         id: "s4",
-        title: "실버 리듬 하모니 합창단",
+        title: "실버 힐링 예술 댄스!",
         sessions: "주 1회 상시",
         participants: "20명 이상",
-        content: "함께 목소리를 높여 하나의 거대한 하모니를 빚어냅니다. 합창 활동을 통해 폐활량을 증진하는 신체적 건강은 물론, 공동체 안에서 소속감을 느끼며 외로움을 떨쳐내는 활기찬 사회 활동 프로그램입니다. 정기 악기+노래 연주회를 통해 가족과 이웃에게 감동을 전합니다.",
-        image: "/images/senior_program_4.jpg"
+        content: "음악에 맞춰 함께 자유롭게 춤을 추며, 악기를 연주하며 모두 예술가가 되어 봅니다. 음악에 맞춰 악기를 연주하고 자유롭게 춤추는 활동은 신체적 건강은 물론, 공동체 안에서 소속감을 느끼며 외로움을 떨쳐내는 활기찬 사회 활동 프로그램입니다.",
+        image: "/images/senior_program_4_new.jpg"
       }
     ]
   }

@@ -21,7 +21,27 @@ const GRID_ITEMS = [
   { id: 12, url: "/images/hero_v7/h12.png" },
   { id: 13, url: "/images/hero_v7/h13.png" },
   { id: 14, url: "/images/hero_v7/h14.png" },
-  { id: 15, url: "/images/hero_v7/h15.png" }
+  { id: 15, url: "/images/hero_v7/h15.png" },
+  { id: 16, url: "/images/hero_v7/h16.png" },
+  { id: 17, url: "/images/hero_v7/h17.png" },
+  { id: 18, url: "/images/hero_v7/h18.jpg" },
+  { id: 19, url: "/images/hero_v7/h19.png" },
+  { id: 20, url: "/images/hero_v7/h20.png" },
+  { id: 21, url: "/images/hero_v7/h21.png" },
+  { id: 22, url: "/images/hero_v7/h22.png" },
+  { id: 23, url: "/images/hero_v7/h23.jpg" },
+  { id: 24, url: "/images/hero_v7/h24.jpg" },
+  { id: 25, url: "/images/hero_v7/h25.png" },
+  { id: 26, url: "/images/hero_v7/h26.png" },
+  { id: 27, url: "/images/hero_v7/h27.png" },
+  { id: 28, url: "/images/hero_v7/h28.png" },
+  { id: 29, url: "/images/hero_v7/h29.png" },
+  { id: 30, url: "/images/hero_v7/h30.png" },
+  { id: 31, url: "/images/hero_v7/h31.png" },
+  { id: 32, url: "/images/hero_v7/h32.png" },
+  { id: 33, url: "/images/hero_v7/h33.png" },
+  { id: 34, url: "/images/hero_v7/h34.jpg" },
+  { id: 35, url: "/images/hero_v7/h35.png" }
 ].map(item => ({
   ...item,
   url: item.url.startsWith('/') ? item.url : `${item.url}?q=80&w=500&h=500&auto=format&fit=crop`
@@ -146,7 +166,7 @@ const Hero: React.FC = () => {
               className="flex gap-4 md:gap-8 w-max"
               initial={{ x: 0 }}
               animate={isPaused ? {} : { x: -totalWidth }}
-              transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+              transition={{ duration: 37.5, repeat: Infinity, ease: "linear" }}
               onMouseEnter={() => setIsPaused(true)}
               onMouseLeave={() => setIsPaused(false)}
             >

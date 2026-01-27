@@ -83,6 +83,53 @@ const GoldSparkle: React.FC<{ index: number; isHovered: boolean }> = ({ index, i
   );
 };
 
+const StatItem: React.FC<{ label: string; value: string }> = ({ label, value }) => {
+  const [isHovered, setIsHovered] = React.useState(false);
+  const colorCycle = ["#FFFFFF", "#737373", "#000000", "#737373", "#FFFFFF"];
+
+  return (
+    <div
+      className="relative flex flex-col items-center justify-center px-6 py-4 rounded-2xl bg-white/50 border border-neutral-100/50 backdrop-blur-sm shadow-sm group cursor-default overflow-hidden"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        {[...Array(8)].map((_, i) => (
+          <Sparkle key={i} index={i} isHovered={isHovered} />
+        ))}
+      </div>
+
+      <motion.p
+        className="text-[10px] md:text-[11px] font-black text-neutral-400 uppercase tracking-[0.2em] mb-1 font-gothic"
+      >
+        {label}
+      </motion.p>
+
+      <motion.span
+        animate={isHovered ? {
+          x: [0, -2, 2, -2, 2, 0],
+          rotate: [0, -1, 1, -1, 1, 0],
+          color: colorCycle,
+        } : {
+          x: 0,
+          rotate: 0,
+          color: colorCycle // Use the cycle for consistent animation
+        }}
+        transition={isHovered ? {
+          x: { repeat: Infinity, duration: 0.3 },
+          rotate: { repeat: Infinity, duration: 0.3 },
+          color: { repeat: Infinity, duration: 4, ease: "linear" }
+        } : {
+          color: { repeat: Infinity, duration: 6, ease: "linear" }
+        }}
+        className="text-xl md:text-2xl font-black font-gothic tracking-tighter"
+      >
+        {value}
+      </motion.span>
+    </div>
+  );
+};
+
 const About: React.FC = () => {
   const [isQuoteHovered, setIsQuoteHovered] = React.useState(false);
   const { scrollYProgress } = useScroll();
@@ -132,7 +179,6 @@ const About: React.FC = () => {
         >
           <div className="grid md:grid-cols-2 gap-8 items-center text-left">
             <div className="relative overflow-hidden rounded-[1.5rem] md:rounded-[2.5rem] shadow-2xl border border-white">
-              {/* Added persistent breathing and subtle movement animation to this image */}
               <motion.img
                 style={{ scale: imageScale }}
                 animate={{
@@ -150,12 +196,23 @@ const About: React.FC = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="space-y-4 px-2">
+            <div className="space-y-6 px-2">
               <h3 className="text-lg md:text-2xl font-extrabold text-neutral-900 tracking-tight">Healing Art Perspective</h3>
               <p className="text-neutral-500 text-[13px] md:text-base leading-[1.8] font-medium max-w-sm md:max-w-none">
                 2011년부터 전국 200여개 공공기관과 국방부 산하 전 군의 정서적 대지에 <strong className="font-bold text-neutral-900">문화예술교육</strong>의 씨앗을 심어온 힐링예술터는, 예술이라는 섬세한 언어로 개인의 숨은 감각을 깨우고 공동체의 유대를 빚어내는 문화예술교육 전문 기획 공간입니다.<br /><br />
                 일상의 경계를 넘어 삶을 예술로 물들이는 고품격 프로그램을 통해, 마음에 울림을 전하고 더 나은 세상을 향한 창의적인 변화를 디자인합니다.
               </p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="grid grid-cols-3 gap-3 md:gap-4 pt-4"
+              >
+                <StatItem label="활동기간" value="15년" />
+                <StatItem label="누적인원" value="2만명" />
+                <StatItem label="만족도" value="97%" />
+              </motion.div>
             </div>
           </div>
         </motion.div>
