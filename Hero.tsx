@@ -12,11 +12,16 @@ const GRID_ITEMS = [
   { id: 3, url: "/images/hero_v7/h3.png" },
   { id: 4, url: "/images/hero_v7/h4.png" },
   { id: 5, url: "/images/hero_v7/h5.jpg" },
-  { id: 101, url: "/images/hero_v7/h1.png" },
-  { id: 102, url: "/images/hero_v7/h2.png" },
-  { id: 103, url: "/images/hero_v7/h3.png" },
-  { id: 104, url: "/images/hero_v7/h4.png" },
-  { id: 105, url: "/images/hero_v7/h5.jpg" }
+  { id: 6, url: "/images/hero_v7/h6.png" },
+  { id: 7, url: "/images/hero_v7/h7.png" },
+  { id: 8, url: "/images/hero_v7/h8.jpg" },
+  { id: 9, url: "/images/hero_v7/h9.jpg" },
+  { id: 10, url: "/images/hero_v7/h10.png" },
+  { id: 11, url: "/images/hero_v7/h11.png" },
+  { id: 12, url: "/images/hero_v7/h12.png" },
+  { id: 13, url: "/images/hero_v7/h13.png" },
+  { id: 14, url: "/images/hero_v7/h14.png" },
+  { id: 15, url: "/images/hero_v7/h15.png" }
 ].map(item => ({
   ...item,
   url: item.url.startsWith('/') ? item.url : `${item.url}?q=80&w=500&h=500&auto=format&fit=crop`
