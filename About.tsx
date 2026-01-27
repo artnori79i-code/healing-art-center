@@ -200,13 +200,11 @@ const About: React.FC = () => {
             </div>
             <div className="space-y-6 px-2">
               <h3 className="text-lg md:text-2xl font-extrabold text-neutral-900 tracking-tight">Healing Art Perspective</h3>
-              <p className="text-neutral-500 text-[13px] md:text-base leading-[1.8] font-medium max-w-sm md:max-w-none">
+              <p className="text-neutral-500 text-[13px] md:text-base leading-[2.2] font-medium max-w-sm md:max-w-none">
                 2011년 설립 이후, 전국 200여 주요 기관과 국방부 전 군을 무대로 고유한 예술적 가치를 실현해 왔습니다.<br />
                 15년의 집요한 현장 전문성은 개인의 감각을 깨우는 정교한 언어가 되었고, 공동체의 결속을 견고히 다졌습니다.<br />
                 평범한 일상을 예술적 미학으로 재해석하는 고품격 프로그램은 삶의 본질을 향한 깊은 통찰과 울림을 제공합니다.<br />
-                더 나은 세상을 향한 창의적 솔루션을 설계하며, 참여자들의 뜨거운 신뢰와 열정 속에 지속적인 성장을 이뤘습니다.<br />
-                예술 교육의 전문적 가치를 추구하며, 각자의 삶이 하나의 완결된 마스터피스로 발현되는 순간을 빚어냅니다.<br />
-                혁신적인 예술 매개체로서 당신의 일상에 품격을 더하고, 가장 정교한 형태의 사회적 조화를 디자인합니다.
+                더 나은 세상을 향한 창의적 솔루션을 설계하며, 참여자들의 뜨거운 신뢰와 열정 속에 지속적인 성장을 이뤘습니다.
               </p>
 
               <motion.div
