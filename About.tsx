@@ -283,8 +283,8 @@ const About: React.FC = () => {
                       transition={{ duration: 0.4 }}
                       className="text-xl md:text-[32px] font-black leading-[1.4] font-gothic tracking-tight"
                     >
-                      "예술이 머무는 일상에서<br />
-                      더 넓고 풍요로운 삶의 풍경을 마주합니다."
+                      "예술의 따스한 숨결이 머무는 곳,<br />
+                      당신의 삶을 평온하게 다독입니다."
                     </motion.p>
                   </div>
                 </div>
