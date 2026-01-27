@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
     <footer className="bg-white py-24 border-t border-neutral-100 overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="flex flex-col items-center text-center gap-12">
-          
+
           {/* 브랜드 섹션: 중앙 정렬 */}
           <div className="max-w-2xl">
             <div className="flex justify-center items-center gap-3 mb-6">
@@ -18,9 +18,9 @@ const Footer: React.FC = () => {
               예술을 통한 긍정적 에너지를 전합니다.
             </p>
           </div>
-          
+
           {/* 중앙 컨택트 카드: 균형감 있게 축소 및 중앙 배치 */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
               <div className="flex flex-col items-center gap-4">
                 {/* 상단 라벨 */}
                 <div className="flex items-center gap-2.5">
-                  <motion.div 
+                  <motion.div
                     whileHover={{ rotate: [0, -15, 15, -15, 0] }}
                     className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white shadow-lg shadow-blue-100"
                   >
@@ -44,27 +44,15 @@ const Footer: React.FC = () => {
                   </motion.div>
                   <span className="text-[9px] font-black text-neutral-300 uppercase tracking-[0.4em] font-gothic">Contact & Apply</span>
                 </div>
-                
+
                 {/* 문의 및 이메일: 한 줄 구성 및 동일 크기 */}
                 <div className="flex items-center gap-4">
                   <span className="text-sm md:text-base font-black text-neutral-400 font-gothic tracking-tight shrink-0">문의</span>
-                  <a 
-                    href="mailto:486sk@naver.com" 
-                    className="relative text-sm md:text-base font-black text-neutral-800 font-gothic group-hover:text-blue-600 transition-colors inline-block tracking-tight"
+                  <span
+                    className="relative text-sm md:text-base font-black text-neutral-800 font-gothic group-hover:text-blue-600 transition-colors inline-block tracking-tight cursor-default"
                   >
                     486sk@naver.com
-                    {/* 세련된 언더라인 */}
-                    <span className="absolute -bottom-1 left-0 w-full h-[3px] bg-neutral-100/50 rounded-full overflow-hidden">
-                      <motion.span 
-                        className="absolute top-0 left-0 h-full bg-blue-600"
-                        initial={{ width: '0%' }}
-                        whileInView={{ width: '15%' }}
-                        viewport={{ once: true }}
-                        whileHover={{ width: '100%' }}
-                        transition={{ duration: 0.6, ease: "circOut" }}
-                      />
-                    </span>
-                  </a>
+                  </span>
                 </div>
               </div>
             </motion.div>
@@ -72,28 +60,28 @@ const Footer: React.FC = () => {
 
           {/* 소셜 버튼 그룹: 중앙 정렬 */}
           <div className="flex flex-wrap justify-center gap-4">
-            <motion.a 
+            <motion.a
               whileHover={{ y: -5, scale: 1.05 }}
-              href="https://blog.naver.com/healingarter" 
-              target="_blank" 
+              href="https://blog.naver.com/healingarter"
+              target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 rounded-2xl bg-neutral-50 text-neutral-600 hover:bg-blue-50 hover:text-blue-700 transition-all font-bold border border-neutral-100 shadow-sm text-xs tracking-widest uppercase"
             >
               Blog
             </motion.a>
-            <motion.a 
+            <motion.a
               whileHover={{ y: -5, scale: 1.05 }}
-              href="https://www.youtube.com/@healingmusic6179/videos" 
-              target="_blank" 
+              href="https://www.youtube.com/@healingmusic6179/videos"
+              target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 rounded-2xl bg-neutral-50 text-neutral-600 hover:bg-red-50 hover:text-red-600 transition-all font-bold border border-neutral-100 shadow-sm text-xs tracking-widest uppercase"
             >
               YouTube
             </motion.a>
-            <motion.a 
+            <motion.a
               whileHover={{ y: -5, scale: 1.05 }}
-              href="https://invite.kakao.com/tc/yBbJA8619b" 
-              target="_blank" 
+              href="https://invite.kakao.com/tc/yBbJA8619b"
+              target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 rounded-2xl bg-blue-500 text-white hover:bg-blue-600 transition-all font-bold shadow-lg text-xs tracking-widest uppercase"
             >

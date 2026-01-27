@@ -180,23 +180,24 @@ const About: React.FC = () => {
           className="relative mb-24 max-w-4xl mx-auto"
         >
           <div className="grid md:grid-cols-2 gap-8 items-center text-left">
-            <div className="relative overflow-hidden rounded-[1.5rem] md:rounded-[2.5rem] shadow-2xl border border-white">
+            <div className="relative overflow-hidden rounded-[1.5rem] md:rounded-[2.5rem] shadow-2xl border border-white aspect-[4/3] md:aspect-auto md:h-[500px]">
               <motion.img
-                style={{ scale: imageScale }}
                 animate={{
-                  scale: [1, 1.04, 1],
-                  rotate: [0, 0.5, -0.5, 0],
-                  filter: ["brightness(1)", "brightness(1.05)", "brightness(1)"]
+                  scale: [1, 1.15, 1],
+                  x: [0, -20, 0],
+                  y: [0, 10, 0],
+                  filter: ["brightness(1) contrast(1)", "brightness(1.1) contrast(1.05)", "brightness(1) contrast(1)"]
                 }}
                 transition={{
-                  duration: 8,
+                  duration: 20,
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
-                src="/images/center_exterior.png"
-                alt="Healing Art Center Exterior"
-                className="w-full h-full object-cover"
+                src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop"
+                alt="Healing Art Studio"
+                className="w-full h-full object-cover scale-110"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
             </div>
             <div className="space-y-6 px-2">
               <h3 className="text-lg md:text-2xl font-extrabold text-neutral-900 tracking-tight">Healing Art Perspective</h3>

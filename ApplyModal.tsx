@@ -116,84 +116,23 @@ const ApplyModal: React.FC<ApplyModalProps> = ({ isOpen, onClose }) => {
               </button>
             </div>
 
-            <div className="p-8 md:p-10 space-y-6">
-              <form onSubmit={handleSubmit} className="space-y-5">
+            <div className="p-8 md:p-10 flex flex-col items-center justify-center space-y-8 min-h-[300px]">
+              <div className="text-center space-y-4">
+                <p className="text-lg md:text-xl font-black text-neutral-800 font-gothic leading-relaxed">
+                  <span className="text-blue-600">486sk@naver.com</span> 으로<br />
+                  신청 및 문의하시면 됩니다!
+                </p>
+                <p className="text-neutral-400 text-xs font-medium">
+                  빠른 시일 내에 답변 드리겠습니다.
+                </p>
+              </div>
 
-                {/* Compact Artistic Header */}
-                <div className="relative p-6 rounded-[2rem] overflow-hidden flex items-center gap-6 bg-blue-50/50 border border-blue-100">
-                  <motion.div
-                    animate={{ y: [0, -5, 0], rotate: [0, 5, 0] }}
-                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                    className="shrink-0 text-blue-400"
-                  >
-                    <svg className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
-                    </svg>
-                  </motion.div>
-                  <div className="text-left">
-                    <h4 className="text-sm font-black text-blue-900 font-gothic tracking-tight leading-snug">
-                      당신의 소중한 울림이 예술이 되는 곳, <br />
-                      힐링예술터가 당신의 마음을 기다립니다.
-                    </h4>
-                    <p className="text-[9px] text-blue-400 font-bold uppercase tracking-wider mt-1">
-                      Where resonance becomes art.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-[9px] font-black text-neutral-400 uppercase tracking-widest mb-1.5 ml-1">Full Name</label>
-                    <input required type="text" placeholder="성함" className="w-full bg-neutral-50 border border-neutral-100 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-blue-500/10 focus:border-blue-500 transition-all font-gothic" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
-                  </div>
-                  <div>
-                    <label className="block text-[9px] font-black text-neutral-400 uppercase tracking-widest mb-1.5 ml-1">Phone Number</label>
-                    <input required type="tel" placeholder="010-0000-0000" className="w-full bg-neutral-50 border border-neutral-100 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-blue-500/10 focus:border-blue-500 transition-all font-gothic" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-[9px] font-black text-neutral-400 uppercase tracking-widest mb-1.5 ml-1">Select Program</label>
-                  <select className="w-full bg-neutral-50 border border-neutral-100 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-blue-500/10 focus:border-blue-500 transition-all appearance-none font-gothic" value={formData.program} onChange={(e) => setFormData({ ...formData, program: e.target.value })}>
-                    <option>국방부 프로그램</option>
-                    <option>문화예술교육 프로그램</option>
-                    <option>'예술로 힐링 프로그램</option>
-                    <option>시니어 프로그램</option>
-                    <option>기타 자유 문의</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-[9px] font-black text-neutral-400 uppercase tracking-widest mb-1.5 ml-1">Inquiry Details</label>
-                  <textarea rows={2} placeholder="궁금하신 점을 적어주세요." className="w-full bg-neutral-50 border border-neutral-100 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-blue-500/10 focus:border-blue-500 transition-all resize-none font-gothic" value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} />
-                </div>
-
-                <div className="flex items-start gap-3 px-1">
-                  <input id="privacy" type="checkbox" className="mt-0.5 w-4 h-4 rounded text-blue-600 focus:ring-blue-500 cursor-pointer" checked={formData.privacyAgreed} onChange={(e) => setFormData({ ...formData, privacyAgreed: e.target.checked })} />
-                  <label htmlFor="privacy" className="text-[10px] text-neutral-500 leading-tight font-medium font-gothic cursor-pointer select-none">
-                    개인정보 수집 및 이용 동의하며, 작성 내용은 안전하게 기록됨을 인지하였습니다.
-                  </label>
-                </div>
-
-                <div className="pt-2">
-                  {/* Positioned Official Contact above the Button */}
-                  <div className="flex flex-col items-center mb-4 space-y-1">
-                    <span className="text-[8px] font-black text-neutral-300 uppercase tracking-widest">Official Recipient</span>
-                    <div className="bg-neutral-50 px-6 py-1.5 rounded-full border border-neutral-100">
-                      <span className="text-[11px] font-bold text-neutral-600 font-gothic">신청서 수신처 : 486sk@naver.com</span>
-                    </div>
-                  </div>
-
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className={`w-full py-5 rounded-2xl text-[13px] font-black tracking-[0.2em] uppercase transition-all shadow-xl font-gothic flex items-center justify-center gap-3 ${isSubmitting ? 'bg-neutral-200 text-neutral-400' : 'bg-blue-600 text-white hover:bg-neutral-900 active:scale-95'}`}
-                  >
-                    {isSubmitting ? 'Processing...' : 'Submit Application'}
-                  </button>
-                </div>
-
-              </form>
+              <button
+                onClick={onClose}
+                className="px-12 py-4 rounded-full bg-blue-600 text-white text-xs font-black tracking-widest uppercase hover:bg-neutral-900 transition-all shadow-lg active:scale-95"
+              >
+                Close
+              </button>
             </div>
           </motion.div>
         </div>
