@@ -199,8 +199,12 @@ const About: React.FC = () => {
             <div className="space-y-6 px-2">
               <h3 className="text-lg md:text-2xl font-extrabold text-neutral-900 tracking-tight">Healing Art Perspective</h3>
               <p className="text-neutral-500 text-[13px] md:text-base leading-[1.8] font-medium max-w-sm md:max-w-none">
-                2011년부터 전국 200여개 공공기관과 국방부 산하 전 군의 정서적 대지에 <strong className="font-bold text-neutral-900">문화예술교육</strong>의 씨앗을 심어온 힐링예술터는, 예술이라는 섬세한 언어로 개인의 숨은 감각을 깨우고 공동체의 유대를 빚어내는 문화예술교육 전문 기획 공간입니다.<br /><br />
-                일상의 경계를 넘어 삶을 예술로 물들이는 고품격 프로그램을 통해, 마음에 울림을 전하고 더 나은 세상을 향한 창의적인 변화를 디자인합니다.
+                2011년 첫 씨앗을 심은 이래, 전국 200여 기관과 군 장병의 마음에 예술의 숨결을 불어넣어 왔습니다.<br />
+                15년의 세월 동안 힐링예술터는 섬세한 언어로 개인의 감각을 깨우고 공동체의 유대를 빚어냈습니다.<br />
+                일상의 경계를 넘어 삶을 예술로 물들이는 고품격 프로그램은 마음에 깊은 울림을 전합니다.<br />
+                더 나은 세상을 향한 창의적인 변화를 디자인하며, 수많은 열정적인 참여 속에 함께 성장했습니다.<br />
+                변함없는 진심으로 예술교육의 가치를 실천하며, 각자의 삶이 하나의 작품이 되는 순간을 만듭니다.<br />
+                우리는 오늘도 예술이라는 따뜻한 통로를 통해, 당신의 일상에 가장 아름다운 화음을 선물합니다.
               </p>
 
               <motion.div
