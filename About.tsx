@@ -155,8 +155,10 @@ const About: React.FC = () => {
             className="text-left"
           >
             <div className="flex items-center justify-start gap-3 mb-3">
-              <div className="w-8 h-8 rounded-full overflow-hidden border border-blue-100">
-                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&h=200&auto=format&fit=crop" alt="Director" className="w-full h-full object-cover" />
+              <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center border border-blue-100 shadow-sm">
+                <svg className="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
+                </svg>
               </div>
               <div className="h-[1px] w-6 bg-blue-600/20" />
             </div>
