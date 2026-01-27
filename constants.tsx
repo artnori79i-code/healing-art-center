@@ -29,7 +29,7 @@ export const PROGRAMS: Program[] = [
     id: 1,
     title: "국방부 프로그램",
     description: "군장병들의 정서적 유대와 사기 진작을 위한 고품격 문화예술교육 공연 및 버스킹 프로그램<br/><span class='text-[11px] md:text-[12px] font-black text-red-500 mt-2 block'>* 본 사진들은 담당장교의 승낙하에 사용되는 사진으로 불펌 금지입니다!</span>",
-    image: "/images/cat_main_01.png",
+    image: "/images/cat_army.png",
     color: "bg-blue-600",
     subPrograms: [
       {
@@ -70,7 +70,7 @@ export const PROGRAMS: Program[] = [
     id: 2,
     title: "문화예술교육 프로그램",
     description: "음악의 기초부터 앙상블까지, 전문 강사진과 함께하는 체계적인 예술 여정",
-    image: "/images/cat_main_02.jpg",
+    image: "/images/cat_culture.jpg",
     color: "bg-emerald-600",
     subPrograms: [
       {
@@ -111,7 +111,7 @@ export const PROGRAMS: Program[] = [
     id: 3,
     title: "예술 치유 프로그램",
     description: "일상의 스트레스를 비워내고 예술적 감수성을 채우는 프리미엄 예술 프로그램",
-    image: "/images/cat_main_03.jpg",
+    image: "/images/cat_healing.jpg",
     color: "bg-indigo-600",
     subPrograms: [
       {
@@ -152,7 +152,7 @@ export const PROGRAMS: Program[] = [
     id: 4,
     title: "시니어 프로그램",
     description: "새로운 리듬으로 열어가는 인생 제2막, 활기찬 노년을 위한 맞춤형 예술 활동",
-    image: "/images/cat_main_04.jpg",
+    image: "/images/cat_senior.jpg",
     color: "bg-orange-600",
     subPrograms: [
       {
