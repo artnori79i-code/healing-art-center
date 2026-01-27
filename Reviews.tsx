@@ -21,9 +21,7 @@ const Reviews: React.FC = () => {
     rating: 5
   });
 
-  const displayedReviews = isExpanded
-    ? [...localReviews, ...localReviews, ...localReviews, ...localReviews]
-    : [...localReviews, ...localReviews];
+  const displayedReviews = localReviews;
 
   const handleOpenModal = () => setIsModalOpen(true);
   const handleCloseModal = () => setIsModalOpen(false);
