@@ -43,7 +43,7 @@ export const PROGRAMS: Program[] = [
   {
     id: 1,
     title: "국방부 프로그램",
-    description: "군장병들의 정서적 유대와 사기 진작을 위한 고품격 문화예술교육 공연 및 버스킹 프로그램<br/><span class='text-[11px] md:text-[12px] font-black text-red-500 mt-2 block'>* 본 사진들은 담당장교의 승낙하에 사용되는 사진으로 불펌 금지입니다!</span>",
+    description: "군장병들의 정서적 유대와 사기 진작을 위한 고품격 문화예술교육 공연 및 버스킹 프로그램<br/><span class='text-[10px] md:text-[11px] font-black text-red-500 mt-2 block'>\"본 사진들은 병영문화예술 홍보를 위해 담당장교의 승인하에 게시된 저작물입니다. 무단 배포 및 상업적 이용을 금합니다.\" [ⓒ 힐링예술터 All rights reserved]</span>",
     image: "/images/cat_army.png",
     color: "bg-blue-600",
     subPrograms: [
