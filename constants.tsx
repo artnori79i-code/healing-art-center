@@ -184,7 +184,7 @@ export const PROGRAMS: Program[] = [
         sessions: "8회기 이상",
         participants: "10명",
         content: "생애 최고의 무대를 향한 감동의 도전입니다. 한 번도 만져보지 못했던 다양한 악기를 배우고, 동료들과 우쿨렐레 화음을 맞추며 '해냈다'는 벅찬 감동을 경험합니다. 인생 제2막의 주인공으로서 무대 위에서 자신의 목소리를 당당히 내는 성취감 중심의 우쿨렐레 앙상블 프로젝트입니다.",
-        image: "/images/senior_program_2.jpg"
+        image: "/images/senior_program_2_v2.jpg"
       },
       {
         id: "s3",
