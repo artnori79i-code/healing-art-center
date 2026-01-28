@@ -83,7 +83,7 @@ const Programs: React.FC = () => {
                   initial={{ scale: 1.3 }}
                   whileInView={{ scale: 1.1 }}
                   transition={{ duration: 10, repeat: Infinity, repeatType: "reverse", ease: "linear" }}
-                  src={prog.image}
+                  src={"/images/army_program_4_v2.jpg"}
                   alt={prog.title}
                   className="absolute inset-0 w-full h-full object-cover"
                 />
@@ -144,8 +144,8 @@ const Programs: React.FC = () => {
                     >
                       <div className="flex flex-col md:flex-row gap-10 items-start">
                         {sub.image && (
-                          <div className="w-full md:w-1/3 aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border-2 border-white bg-neutral-100">
-                            <img src={sub.image} alt={sub.title} className="w-full h-full object-contain" />
+                          <div className="w-full md:w-[45%] aspect-auto rounded-2xl overflow-hidden shadow-lg border-2 border-white bg-neutral-100">
+                            <img src={sub.image} alt={sub.title} className="w-full h-auto object-contain max-h-[500px]" />
                           </div>
                         )}
                         <div className="flex-1 space-y-6">

@@ -61,7 +61,7 @@ export const PROGRAMS: Program[] = [
         sessions: "단기/중장기",
         participants: "전 장병",
         content: "매주 1회씩 문화예술교육을 진행합니다! 부대 일정에 맞춰 5주차 미만, 10주차 미만, 중장기 교육을 진행합니다! 병영 생활에 활력을 불어넣습니다. 장병들과 가까이서 호흡하는 예술교육입니다. <br/><br/><span class='text-spangle-box'>부대에서 2년 연속 매해 신청할 정도로 재참여율 및 신청률이 높습니다!</span>",
-        image: "/images/army_program_2.jpg?v=3"
+        image: "/images/army_program_2_v2.png"
       },
       {
         id: "d3",
@@ -77,7 +77,7 @@ export const PROGRAMS: Program[] = [
         sessions: "60분 내외",
         participants: "부대 신청인원에 맞춰 조율 가능함",
         content: "전문 아티스트들이 직접 부대를 방문하여 품격 있는 음악과 예술 공연을 선사합니다. 군장병들의 문화적 갈증을 해소하고 그룹성취감, 단합, 화합, 악기 연주를 통한 스트레스 해소의 목적으로 프로그램이 진행됩니다!",
-        image: "/images/army_program_4.jpg"
+        image: "/images/army_program_4_v2.jpg"
       }
     ]
   },
@@ -143,7 +143,7 @@ export const PROGRAMS: Program[] = [
         sessions: "1회(원데이)",
         participants: "20명 내외",
         content: "싱잉볼과 텅드럼이 자아내는 신비로운 파동의 목욕 속에 전신을 맡깁니다. 소리의 공명이 몸의 세포 하나하나를 깨우고 깊은 명상의 세계로 안내하여, 뇌파를 안정시키고 신체의 긴장을 마법처럼 완화해주는 휴식형 테라피입니다. 예술적 도구가 전하는 순수한 울림을 통해 진정한 '비움'의 평온을 경험하게 됩니다.",
-        image: "/images/healing_program_2.jpg"
+        image: "/images/healing_program_2_v2.jpg"
       },
       {
         id: "h3",
