@@ -180,7 +180,7 @@ const About: React.FC = () => {
           className="relative mb-24 max-w-4xl mx-auto"
         >
           <div className="grid md:grid-cols-2 gap-8 items-center text-left">
-            <div className="relative overflow-hidden rounded-[1.5rem] md:rounded-[2.5rem] shadow-2xl border border-white aspect-[4/3] md:aspect-auto md:h-[500px]">
+            <div className="relative overflow-hidden rounded-[1.5rem] md:rounded-[2.5rem] shadow-2xl border border-white aspect-[16/10]">
               <motion.img
                 animate={{
                   scale: [1, 1.15, 1],
