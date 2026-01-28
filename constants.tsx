@@ -151,7 +151,7 @@ export const PROGRAMS: Program[] = [
         sessions: "2시간",
         participants: "임직원",
         content: "치열한 업무 현장에서 잠시 벗어나 예술이라는 쉼표를 찍습니다. 예술적 유희와 즉흥적인 표현 활동을 통해 소진된 에너지를 충전하고, 정서적 환기를 유도하여 조직 내의 경직된 소통을 유연하게 바꿉니다. 창의적 자극을 통해 번아웃을 예방하고 다시 일상으로 나아갈 수 있는 건강한 생명력을 불어넣는 맞춤형 솔루션입니다.",
-        image: "/images/healing_program_3.jpg"
+        image: "/images/healing_program_3_v2.jpg"
       },
       {
         id: "h4",
