@@ -142,10 +142,15 @@ const Programs: React.FC = () => {
                       transition={{ delay: 0.1 * i }}
                       className="border-b border-neutral-100 pb-16 last:border-0 last:pb-0"
                     >
-                      <div className="flex flex-col md:flex-row gap-10 items-start">
+                      <div className="flex flex-col md:flex-row gap-12 items-center">
                         {sub.image && (
-                          <div className="w-full md:w-[45%] aspect-auto rounded-2xl overflow-hidden shadow-lg border-2 border-white bg-neutral-100">
-                            <img src={sub.image} alt={sub.title} className="w-full h-auto object-contain max-h-[500px]" />
+                          <div className="w-full md:w-[55%] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white flex-shrink-0">
+                            <img
+                              src={sub.image}
+                              alt={sub.title}
+                              className="w-full h-auto block transition-transform duration-700 hover:scale-105"
+                              style={{ imageRendering: 'auto' }}
+                            />
                           </div>
                         )}
                         <div className="flex-1 space-y-6">
