@@ -13,7 +13,7 @@ const INSIGHT_DATA = [
     title: '힐링예술터 유튜브',
     desc: '공식 유튜브 채널에서 다양한 공연 영상을 만나보세요.',
     url: YOUTUBE_URL,
-    image: '/images/insight_youtube.png',
+    image: '/images/insight_youtube_v2.png',
     linkText: 'YOUTUBE'
   },
   {
