@@ -16,7 +16,7 @@ export interface SubProgram {
   content: string;
   link?: string;
   image?: string;
-  referenceImages?: string[];
+  youtubeUrl?: string;
 }
 
 export interface Program {

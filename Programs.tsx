@@ -142,15 +142,32 @@ const Programs: React.FC = () => {
                       transition={{ delay: 0.1 * i }}
                       className="border-b border-neutral-100 pb-16 last:border-0 last:pb-0"
                     >
-                      <div className="flex flex-col md:flex-row gap-12 items-center">
+                      <div className="flex flex-col md:flex-row gap-12 items-start">
                         {sub.image && (
-                          <div className="w-full md:w-[55%] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white flex-shrink-0">
-                            <img
-                              src={sub.image}
-                              alt={sub.title}
-                              className="w-full h-auto block transition-transform duration-700 hover:scale-105"
-                              style={{ imageRendering: 'auto' }}
-                            />
+                          <div className="w-full md:w-[48%] space-y-4 flex-shrink-0">
+                            <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+                              <img
+                                src={sub.image}
+                                alt={sub.title}
+                                className="w-full h-auto block transition-transform duration-700 hover:scale-105"
+                                style={{ imageRendering: 'auto' }}
+                              />
+                            </div>
+                            {sub.youtubeUrl && (
+                              <motion.a
+                                href={sub.youtubeUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                whileHover={{ scale: 1.02 }}
+                                whileTap={{ scale: 0.98 }}
+                                className="flex items-center justify-center gap-2 w-full py-3 bg-[#FF0000] text-white rounded-xl font-bold text-sm shadow-lg hover:bg-[#CC0000] transition-colors"
+                              >
+                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                                </svg>
+                                영상 보기 (YOUTUBE)
+                              </motion.a>
+                            )}
                           </div>
                         )}
                         <div className="flex-1 space-y-6">
