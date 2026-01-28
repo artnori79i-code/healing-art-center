@@ -13,7 +13,7 @@ const INSIGHT_DATA = [
     title: '힐링예술터 유튜브',
     desc: '공식 유튜브 채널에서 다양한 공연 영상을 만나보세요.',
     url: YOUTUBE_URL,
-    image: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=600&auto=format&fit=crop',
+    image: '/images/insight_youtube.png',
     linkText: 'YOUTUBE'
   },
   {
@@ -41,7 +41,7 @@ const Insight: React.FC = () => {
     <div id="insight" className="bg-white py-20 md:py-32 border-t border-neutral-50 overflow-hidden">
       <div className="container mx-auto px-6 mb-12">
         <div className="text-center">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -49,7 +49,7 @@ const Insight: React.FC = () => {
           >
             INSIGHT
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
@@ -78,12 +78,12 @@ const Insight: React.FC = () => {
             >
               <div className="relative aspect-[16/10] overflow-hidden">
                 {/* Ken Burns Effect for Insight Images */}
-                <motion.img 
+                <motion.img
                   initial={{ scale: 1.2, x: "-2%" }}
                   animate={{ scale: 1.1, x: "2%" }}
                   transition={{ duration: 8, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
-                  src={item.image} 
-                  alt={item.title} 
+                  src={item.image}
+                  alt={item.title}
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-500" />
@@ -104,7 +104,7 @@ const Insight: React.FC = () => {
                 <p className="text-neutral-400 text-[13px] leading-relaxed font-gothic mb-8 flex-1 max-w-[220px]">
                   {item.desc}
                 </p>
-                
+
                 <div className="flex items-center gap-2 group/link">
                   <span className="text-[11px] font-black text-neutral-800 tracking-widest uppercase border-b-2 border-neutral-100 group-hover/link:border-blue-600 transition-all font-gothic pb-1">
                     {item.linkText}
