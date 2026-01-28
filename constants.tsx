@@ -62,7 +62,7 @@ export const PROGRAMS: Program[] = [
         participants: "전 장병",
         content: "매주 1회씩 문화예술교육을 진행합니다! 부대 일정에 맞춰 5주차 미만, 10주차 미만, 중장기 교육을 진행합니다! 병영 생활에 활력을 불어넣습니다. 장병들과 가까이서 호흡하는 예술교육입니다. <br/><br/><span class='text-spangle-box'>부대에서 2년 연속 매해 신청할 정도로 재참여율 및 신청률이 높습니다!</span>",
         image: "/images/army_program_2_v2.png",
-        youtubeUrl: "https://www.youtube.com/@healingmusic6179"
+        youtubeUrl: "https://youtu.be/cmc5f3t0Kb0"
       },
       {
         id: "d3",
