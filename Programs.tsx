@@ -83,7 +83,7 @@ const Programs: React.FC = () => {
                   initial={{ scale: 1.3 }}
                   whileInView={{ scale: 1.1 }}
                   transition={{ duration: 10, repeat: Infinity, repeatType: "reverse", ease: "linear" }}
-                  src={"/images/army_program_4_v2.jpg"}
+                  src={prog.image}
                   alt={prog.title}
                   className="absolute inset-0 w-full h-full object-cover"
                 />
