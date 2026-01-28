@@ -53,7 +53,8 @@ export const PROGRAMS: Program[] = [
         sessions: "8회기 이상",
         participants: "20명 내외",
         content: "악기 연주 기초부터 합주까지, 장병들이 직접 음악팀을 구성하고 연습할 수 있도록 전문가가 밀착 지도합니다. 책임감과 협동심을 기를 수 있는 장기 교육 과정입니다. 병영문화생활의 복지를 향상 합니다! <br/><br/><span class='text-spangle-box'>* 힐링예술터는 15년간의 군장병 문화예술교육 기획으로 군장병들의 교육과정 니즈와 선호도를 잘 파악하고 있어 매주 참여율이 굉장히 높습니다!</span>",
-        image: "/images/army_program_1.png?v=3"
+        image: "/images/army_program_1.png?v=3",
+        youtubeUrl: "https://youtu.be/AiXyLolD6A4"
       },
       {
         id: "d2",
