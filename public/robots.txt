@@ -2,5 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://healing-art-center.vercel.app/sitemap.xml
-
 #DaumWebMasterTool:cb11de37f6f50c7cddb03f487b703b1cb82d1e5396b3f077ce944ca0805675a6:UxmlswLliPludcNqYWsdTQ==
