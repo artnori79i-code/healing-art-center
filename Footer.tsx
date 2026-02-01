@@ -110,7 +110,10 @@ const Footer: React.FC<FooterProps> = ({ onApplyClick }) => {
 
         {/* 하단 카피라이트 영역: 중앙 정렬 */}
         <div className="mt-24 pt-10 border-t border-neutral-100 flex flex-col items-center gap-6 text-[10px] md:text-[11px] font-bold text-neutral-300 tracking-[0.2em] uppercase">
-          <p>© 2011 힐링예술터. All Rights Reserved.</p>
+          <div className="text-center space-y-2">
+            <p>본 사이트의 사진·영상은 촬영 및 활용 동의를 받아 사용되었습니다. 무단배포 및 상업적 이용을 금합니다.</p>
+            <p>[ⓒ 힐링예술터 All rights reserved]</p>
+          </div>
           <div className="flex gap-12">
             <a href="#" className="hover:text-neutral-800 transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-neutral-800 transition-colors">Terms of Service</a>
