@@ -32,7 +32,7 @@ const App: React.FC = () => {
           <Insight />
         </section>
       </main>
-      <Footer />
+      <Footer onApplyClick={() => setIsApplyModalOpen(true)} />
       <ApplyModal
         isOpen={isApplyModalOpen}
         onClose={() => setIsApplyModalOpen(false)}

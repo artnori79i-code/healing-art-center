@@ -2,7 +2,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const Footer: React.FC = () => {
+interface FooterProps {
+  onApplyClick?: () => void;
+}
+
+const Footer: React.FC<FooterProps> = ({ onApplyClick }) => {
   return (
     <footer className="bg-white py-24 border-t border-neutral-100 overflow-hidden">
       <div className="container mx-auto px-6">
@@ -46,13 +50,27 @@ const Footer: React.FC = () => {
                 </div>
 
                 {/* 문의 및 이메일: 한 줄 구성 및 동일 크기 */}
-                <div className="flex items-center gap-4">
-                  <span className="text-sm md:text-base font-black text-neutral-400 font-gothic tracking-tight shrink-0">문의</span>
-                  <span
-                    className="relative text-sm md:text-base font-black text-neutral-800 font-gothic group-hover:text-blue-600 transition-colors inline-block tracking-tight cursor-default"
+                <div className="flex items-center gap-6">
+                  <div className="flex items-center gap-4">
+                    <span className="text-sm md:text-base font-black text-neutral-400 font-gothic tracking-tight shrink-0">문의</span>
+                    <span
+                      className="relative text-sm md:text-base font-black text-neutral-800 font-gothic group-hover:text-blue-600 transition-colors inline-block tracking-tight cursor-default"
+                    >
+                      486sk@naver.com
+                    </span>
+                  </div>
+
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={onApplyClick}
+                    className="bg-blue-600 text-white px-6 py-2 rounded-full font-black text-xs md:text-[11px] tracking-widest uppercase hover:bg-neutral-900 transition-all shadow-md flex items-center gap-2"
                   >
-                    486sk@naver.com
-                  </span>
+                    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                    </svg>
+                    메일 보내기
+                  </motion.button>
                 </div>
               </div>
             </motion.div>
