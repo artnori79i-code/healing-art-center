@@ -531,7 +531,7 @@ const About: React.FC = () => {
                     {[
                       { id: "01", title: "핵심 전문성 (Core)", items: ["KCMT(음악중재전문가) 전문 Music Therapist 자격", "이화여자대학교 교육대학원 연구원 과정 수료", "통합문화예술교육 교수법 구축"] },
                       { id: "02", title: "예술적 확장 (Expansion)", items: ["무용지도사 / 체형교정발레 / 영어발레 지도사", "신체 중심 교육(Movement-based) 체계 수립", "이화여자대학교 유아아동무용지도사 자격"] },
-                      { id: "03", title: "교육적 통찰 (Insight)", items: ["인성지도사, 미술심리상담사, 독서성품지도사 자격증", "통합 커리큘럼 설계 (심미적 경험 + 자기 주도적 창의성)"] },
+                      { id: "03", title: "교육적 통합 (Integration)", items: ["인성지도사, 미술심리상담사, 독서성품지도사 자격증", "통합 커리큘럼 설계 (심미적 경험 + 자기 주도적 창의성)"] },
                       { id: "04", title: "글로벌 연구 (Research)", items: ["Nordoff-Robbins Music Therapy Program 수료", "Music Therapy 양적 연구방법(SPSS) 전문", "예술교육 효과성의 데이터 기반 분석"] }
                     ].map((group, idx) => (
                       <div key={idx} className={`space-y-4 ${idx !== 3 ? 'pb-10 border-b border-neutral-50' : ''}`}>
