@@ -197,7 +197,7 @@ const About: React.FC = () => {
               <div className="h-[1px] w-6 bg-blue-600/20" />
             </div>
             <h2 className="text-xl md:text-3xl font-black tracking-tighter uppercase font-gothic text-neutral-900">
-              HEALING 예술터
+              힐링예술터 - 문화예술교육 & 병영문화예술체험
             </h2>
           </motion.div>
           <div className="hidden md:flex gap-4 text-[8px] font-black tracking-[0.2em] uppercase text-neutral-300 font-gothic">
@@ -234,12 +234,12 @@ const About: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
             </div>
             <div className="space-y-6 px-2">
-              <h3 className="text-lg md:text-2xl font-extrabold text-neutral-900 tracking-tight">Healing Art Perspective</h3>
+              <h3 className="text-lg md:text-2xl font-extrabold text-neutral-900 tracking-tight">문화예술교육 및 프로젝트 실적</h3>
               <p className="text-neutral-500 text-[13px] md:text-base leading-[2.2] font-medium max-w-xl md:max-w-none text-left">
-                2011년 설립 이후, 전국 200여 주요 기관과 국방부 전 군을 무대로 고유한 예술적 가치를 실현해 왔습니다.<br />
-                15년의 집요한 현장 전문성은 공동체의 결속을 다짐과 함께 개인의 감각을 깨우는 예술이 되었습니다!<br />
-                평범한 일상을 예술적 미학으로 재해석하는 고품격 문화예술교육 프로그램은 삶의 본질을 향한 깊은 통찰과 울림을 제공드리기 위해 기획됩니다!<br />
-                우리속에 스며든 예술을 통해 더 나은 세상을 향한 창의적 솔루션을 설계하며, 참여자들의 뜨거운 신뢰와 열정 속에 지속적인 성장을 이뤘습니다.
+                2011년 설립 이후, 전국 200여 주요 기관과 국방부 전 군을 무대로 <b>병영문화예술체험</b> 및 <b>문화예술교육</b> 분야의 고유한 예술적 가치를 실현해 왔습니다.<br />
+                15년의 집요한 현장 전문성은 공동체의 결속을 다짐과 함께 <b>군부대공연</b> 및 <b>공연</b>을 통한 예술적 소통의 장이 되었습니다!<br />
+                평범한 일상을 예술적 미학으로 재해석하는 고품격 <b>기업강의</b> 및 문화예술교육 프로그램은 삶의 본질을 향한 깊은 통찰과 울림을 제공드리기 위해 기획됩니다!<br />
+                우리속에 스며든 예술을 통해 <b>병영예술체험</b>의 새로운 창의적 솔루션을 설계하며, 참여자들의 뜨거운 신뢰와 열정 속에 지속적인 성장을 이뤘습니다.
               </p>
 
               <motion.div
@@ -302,7 +302,7 @@ const About: React.FC = () => {
                 <><b>100여개 초·중·고교</b> 문화예술교육 기획 및 교육 협약, 전교생 대상 장기 프로젝트: <b>동작초등학교</b>(전교생 대상 창의예술체험), <b>서울시 교육청</b> 등 수도권 수십여 개교와 협력하여 학기별 정규 프로그램 운영</>,
                 <><b>광역 지자체</b> 교육지원사업: <b>서울시</b>(동작구, 은평구, 성북구 등), <b>경기도</b>(김포, 시흥 등) 관내 학교 및 센터 연계 예술 교육 서비스 제공</>,
                 <>인문·문학 융합 교육: <b>어린이도서연구회</b> 협력 '예술동화탐험' 시리즈를 통한 독서 창작과 시각/음악 활동의 복합 설계</>,
-                <>미디어 기반 통합 교육: <b>세종시</b> 협력 <b>스마트폰·인터넷 중독 예방</b>을 위한 '밴드 융합 소리놀이' 및 세종시 청소년 예술 치유 캠프 운영</>
+                <>미디어 기반 통합 교육: <b>세종시</b> 협력 <b>스마트폰·인터넷 중독 예방</b>을 위한 '밴드 융합 소리놀이' 및 세종시 청소년 <b>예술 체험 캠프</b> 운영</>
               ]}
             />
             <HistoryCard
@@ -318,12 +318,12 @@ const About: React.FC = () => {
             />
             <HistoryCard
               delay={0.4}
-              title="4. 기업 사회공헌(CSR) 및 의료기관 문화예술교육+예술치유 실적"
+              title="4. 기업 사회공헌(CSR) 및 의료기관 문화예술교육+예술체험 실적"
               items={[
                 <><b>글로벌 기업</b> 협력 실적: <b>사노피 아벤티스</b>('싱싱엔돌핀', '함께해송'), <b>GS칼텍스</b>, <b>대웅제약</b> 등 기업 연계 예술 솔루션 제공</>,
-                <><b>주요 대학병원 환자 정서지원</b>: <b>한강성심(신경정신), 여의도성모, 한양대, 고려대병원 암센터</b> 등 의료 현장 내 <b>문화예술교육 +예술치유</b> 접목 교육 적용</>,
+                <><b>주요 대학병원 환자 정서지원</b>: <b>한강성심(신경정신), 여의도성모, 한양대, 고려대병원 암센터</b> 등 의료 현장 내 <b>문화예술교육 +예술체험</b> 접목 교육 적용</>,
                 <><b>2014 사노피 아벤티스</b> 제약회사 후원사업 운영 <b>&lt;'암생존자/ 암환우 대상': '함께해송 프로그램' 기획자 및 주강사&gt;</b></>,
-                <><b>(사)세계예술치료협회 &lt;세계예술치유축제: 장애-비장애형제를 위한 왁자지껄 예술치유축제, 아싸라비아!&gt; 10년 이상 매해 꾸준히</b> 참여 함</>,
+                <><b>(사)세계예술교육협회 &lt;세계예술체험축제: 장애-비장애형제를 위한 왁자지껄 예술체험축제, 아싸라비아!&gt; 10년 이상 매해 꾸준히</b> 참여 함</>,
                 <><b>사회복지재단</b> 협력: <b>삼성꿈장학재단, 초록우산 어린이재단, 하이패밀리</b> 등과 연계한 취약계층 예술 복지 실현</>
               ]}
             />
@@ -403,12 +403,12 @@ const About: React.FC = () => {
                     <span className="w-4 h-[2px] bg-blue-600"></span> 주요 약력
                   </h6>
                   <ul className="text-[13px] md:text-[14px] text-neutral-500 space-y-2.5 font-medium leading-tight text-left">
-                    <li>• 이화여자대학교 교육대학원 음악치료교육 졸업</li>
+                    <li>• 이화여자대학교 교육대학원 문화예술교육(음악) 졸업</li>
                     <li>• 이화여자대학교 문화예술교육원 무용학/음악학 수료</li>
                     <li>• 연세대학교 신학과 졸업</li>
                     <li className="font-bold text-neutral-800">• 前) 국방부 문화예술교육 총괄 기획자</li>
-                    <li className="font-bold text-neutral-800">• 前) 서울디지털대학교 음악치료반주법 교수</li>
-                    <li>• 前) 이화여자대학교 예술교육치료연구소 연구원</li>
+                    <li className="font-bold text-neutral-800">• 前) 서울디지털대학교 음악교육 반주법 교수</li>
+                    <li>• 前) 이화여자대학교 예술교육연구소 연구원</li>
                   </ul>
                 </div>
 
