@@ -527,19 +527,19 @@ const About: React.FC = () => {
                     <p className="text-[13px] text-neutral-400 font-medium italic">“음악적 본질을 바탕으로 예술의 경계를 넓히는 통합 예술교육가”</p>
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-x-12 gap-y-10">
+                  <div className="flex flex-col gap-y-10 max-w-3xl">
                     {[
                       { id: "01", title: "핵심 전문성 (Core)", items: ["KCMT(음악중재전문가) 전문 Music Therapist 자격", "이화여자대학교 교육대학원 연구원 과정 수료", "통합문화예술교육 교수법 구축"] },
                       { id: "02", title: "예술적 확장 (Expansion)", items: ["무용지도사 / 체형교정발레 / 영어발레 지도사", "신체 중심 교육(Movement-based) 체계 수립", "이화여자대학교 유아아동무용지도사 자격"] },
                       { id: "03", title: "교육적 통찰 (Insight)", items: ["인성지도사, 미술심리상담사, 독서성품지도사 자격증", "통합 커리큘럼 설계 (심미적 경험 + 자기 주도적 창의성)"] },
                       { id: "04", title: "글로벌 연구 (Research)", items: ["Nordoff-Robbins Music Therapy Program 수료", "Music Therapy 양적 연구방법(SPSS) 전문", "예술교육 효과성의 데이터 기반 분석"] }
                     ].map((group, idx) => (
-                      <div key={idx} className="space-y-4">
+                      <div key={idx} className={`space-y-4 ${idx !== 3 ? 'pb-10 border-b border-neutral-50' : ''}`}>
                         <div className="flex items-center gap-3">
                           <span className="text-blue-600 font-black text-[10px] font-gothic w-6 h-6 rounded-lg bg-blue-50 flex items-center justify-center">{group.id}</span>
                           <span className="text-[14px] font-black text-neutral-900 uppercase tracking-wider font-gothic">{group.title}</span>
                         </div>
-                        <ul className="text-[13px] text-neutral-500 space-y-2 pl-9 leading-relaxed font-medium">
+                        <ul className="text-[14px] text-neutral-500 space-y-3 pl-9 leading-relaxed font-medium">
                           {group.items.map((item, i) => (
                             <li key={i} className="flex gap-2">
                               <span className="text-blue-200">•</span>
