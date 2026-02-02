@@ -428,7 +428,7 @@ const About: React.FC = () => {
                     whileTap={{ scale: 0.98 }}
                     className="flex items-center justify-between px-6 py-5 rounded-full bg-white border border-neutral-100 shadow-sm hover:shadow-md transition-all group"
                   >
-                    <span className="text-[9px] font-black tracking-[0.1em] uppercase text-neutral-800">Profile Archive</span>
+                    <span className="text-[10px] font-black tracking-wider uppercase text-neutral-800">교수 프로필</span>
                     <div className="w-6 h-6 rounded-full bg-blue-600 flex items-center justify-center text-white">
                       <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
