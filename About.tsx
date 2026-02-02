@@ -197,7 +197,7 @@ const About: React.FC = () => {
               <div className="h-[1px] w-6 bg-blue-600/20" />
             </div>
             <h2 className="text-xl md:text-3xl font-black tracking-tighter uppercase font-gothic text-neutral-900">
-              힐링예술터 - 문화예술교육 & 병영문화예술체험
+              HEALING 예술터
             </h2>
           </motion.div>
           <div className="hidden md:flex gap-4 text-[8px] font-black tracking-[0.2em] uppercase text-neutral-300 font-gothic">
@@ -234,12 +234,12 @@ const About: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
             </div>
             <div className="space-y-6 px-2">
-              <h3 className="text-lg md:text-2xl font-extrabold text-neutral-900 tracking-tight">문화예술교육 및 프로젝트 실적</h3>
+              <h3 className="text-lg md:text-2xl font-extrabold text-neutral-900 tracking-tight">Healing Art Perspective</h3>
               <p className="text-neutral-500 text-[13px] md:text-base leading-[2.2] font-medium max-w-xl md:max-w-none text-left">
-                2011년 설립 이후, 전국 200여 주요 기관과 국방부 전 군을 무대로 <b>병영문화예술체험</b> 및 <b>문화예술교육</b> 분야의 고유한 예술적 가치를 실현해 왔습니다.<br />
-                15년의 집요한 현장 전문성은 공동체의 결속을 다짐과 함께 <b>군부대공연</b> 및 <b>공연</b>을 통한 예술적 소통의 장이 되었습니다!<br />
-                평범한 일상을 예술적 미학으로 재해석하는 고품격 <b>기업강의</b> 및 문화예술교육 프로그램은 삶의 본질을 향한 깊은 통찰과 울림을 제공드리기 위해 기획됩니다!<br />
-                우리속에 스며든 예술을 통해 <b>병영예술체험</b>의 새로운 창의적 솔루션을 설계하며, 참여자들의 뜨거운 신뢰와 열정 속에 지속적인 성장을 이뤘습니다.
+                2011년 설립 이후, 전국 200여 주요 기관과 국방부 전 군을 무대로 고유한 예술적 가치를 실현해 왔습니다.<br />
+                15년의 집요한 현장 전문성은 공동체의 결속을 다짐과 함께 개인의 감각을 깨우는 예술이 되었습니다!<br />
+                평범한 일상을 예술적 미학으로 재해석하는 고품격 문화예술교육 프로그램은 삶의 본질을 향한 깊은 통찰과 울림을 제공드리기 위해 기획됩니다!<br />
+                우리속에 스며든 예술을 통해 더 나은 세상을 향한 창의적 솔루션을 설계하며, 참여자들의 뜨거운 신뢰와 열정 속에 지속적인 성장을 이뤘습니다.
               </p>
 
               <motion.div

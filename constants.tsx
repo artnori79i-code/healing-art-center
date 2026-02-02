@@ -127,7 +127,7 @@ export const PROGRAMS: Program[] = [
   },
   {
     id: 3,
-    title: "예술 체험 프로그램",
+    title: "예술 치유 프로그램",
     description: "일상의 스트레스를 비워내고 예술적 감수성을 채우는 프리미엄 예술 프로그램",
     image: "/images/cat_healing.jpg",
     color: "bg-indigo-600",
