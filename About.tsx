@@ -481,23 +481,17 @@ const About: React.FC = () => {
                 className="overflow-hidden"
               >
                 <div className="bg-neutral-50/50 rounded-[2.5rem] p-8 md:p-14 border border-neutral-100 space-y-10">
-                  <div className="space-y-2">
-                    <h2 className="text-xl md:text-2xl font-black text-neutral-900 font-gothic tracking-tighter">
-                      통합 예술교육을 향한 15년의 사유
-                    </h2>
-                    <div className="w-8 h-[2px] bg-blue-600" />
-                  </div>
 
                   <div className="space-y-10">
                     <p className="text-lg md:text-2xl text-neutral-800 leading-relaxed font-black italic font-gothic border-l-4 border-blue-50 pl-6">
                       “음악의 본질적 힘을 매개로, 일상과 예술을 잇는 <br className="hidden md:block" /> 통합적 교육 모델을 실천합니다.”
                     </p>
-                    
+
                     <div className="space-y-8 text-neutral-500 leading-relaxed font-medium">
                       <p className="text-[15px] md:text-base">
                         저는 지난 15년이라는 시간 동안, 음악이 지닌 단단한 구조적 아름다움과 따스한 정서적 위로가 어떻게 다른 예술 장르, 그리고 우리 삶의 교육적 가치와 맞닿을 수 있을지 깊이 고민해 왔습니다. 학문적으로는 'Music Therapy'라는 토대 위에서 성장했으며, 이를 우리 곁의 보편적인 문화예술교육 안에서 그 치유적 온기로 자연스럽게 녹여내고자 마음을 다해왔습니다.
                       </p>
-                      
+
                       <div className="grid md:grid-cols-1 gap-8 pt-4">
                         {[
                           { title: "감각의 확장과 융합", desc: "음악의 리듬과 선율이 신체의 부드러운 움직임이 되고, 다시 시각적인 형상화와 인문학적 성찰로 이어지는 '통합예술교육'을 연구합니다. 이러한 고유의 교수법을 현장에 조심스럽게 적용하며 예술의 경계가 허물어지는 지점을 발견해 왔습니다." },
@@ -510,9 +504,9 @@ const About: React.FC = () => {
                           </div>
                         ))}
                       </div>
-                      
+
                       <p className="text-[15px] md:text-base text-neutral-800 font-extrabold pt-6 border-t border-neutral-100">
-                        거창한 성과를 내세우기보다는, 예술의 온기가 필요한 곳에서 <br className="hidden md:block"/> 참여자분들과 함께 숨 쉬며 지속 가능한 통합 예술교육의 모델을 겸허히 실천해 나가겠습니다.
+                        거창한 성과를 내세우기보다는, 예술의 온기가 필요한 곳에서 <br className="hidden md:block" /> 참여자분들과 함께 숨 쉬며 지속 가능한 통합 예술교육의 모델을 겸허히 실천해 나가겠습니다.
                       </p>
                     </div>
                   </div>
