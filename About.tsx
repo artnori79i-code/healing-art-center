@@ -130,8 +130,31 @@ const StatItem: React.FC<{ label: string; value: string }> = ({ label, value }) 
   );
 };
 
+const HistoryCard: React.FC<{ title: string; items: string[]; delay: number }> = ({ title, items, delay }) => (
+  <motion.div
+    initial={{ opacity: 0, scale: 0.95 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    transition={{ delay, duration: 0.5 }}
+    className="bg-neutral-50/50 border border-neutral-100 p-6 md:p-8 rounded-[2rem] hover:bg-white hover:shadow-xl transition-all group"
+  >
+    <h4 className="text-sm md:text-base font-black text-neutral-900 mb-6 flex items-center gap-3">
+      <span className="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
+      {title}
+    </h4>
+    <ul className="space-y-4">
+      {items.map((item, i) => (
+        <li key={i} className="flex gap-3 text-[13px] md:text-[14px] leading-relaxed">
+          <span className="text-blue-600 font-black shrink-0">•</span>
+          <span className="text-neutral-500 font-medium group-hover:text-neutral-700 transition-colors">{item}</span>
+        </li>
+      ))}
+    </ul>
+  </motion.div>
+);
+
 const About: React.FC = () => {
   const [isQuoteHovered, setIsQuoteHovered] = React.useState(false);
+  const [showHistory, setShowHistory] = React.useState(false);
   const { scrollYProgress } = useScroll();
   const profileRotate = useTransform(scrollYProgress, [0.1, 0.4], [-2, 2]);
   const profileY = useTransform(scrollYProgress, [0.1, 0.4], [0, -30]);
@@ -218,7 +241,76 @@ const About: React.FC = () => {
                 <StatItem label="누적인원" value="2만명" />
                 <StatItem label="만족도" value="97%" />
               </motion.div>
+
+              {/* History Toggle Button */}
+              <div className="pt-6">
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  onClick={() => setShowHistory(!showHistory)}
+                  className="w-full flex items-center justify-between px-8 py-5 rounded-full bg-neutral-900 text-white hover:bg-blue-600 transition-all shadow-xl group"
+                >
+                  <span className="text-[11px] font-black tracking-[0.2em] uppercase">힐링예술터 주요 활동 실적 (연혁)</span>
+                  <motion.div
+                    animate={{ rotate: showHistory ? 180 : 0 }}
+                    className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center"
+                  >
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </motion.div>
+                </motion.button>
+              </div>
             </div>
+          </div>
+        </motion.div>
+
+        {/* Expandable History Section */}
+        <motion.div
+          initial={false}
+          animate={{ height: showHistory ? "auto" : 0, opacity: showHistory ? 1 : 0 }}
+          className="overflow-hidden mb-24"
+        >
+          <div className="grid md:grid-cols-2 gap-6 pt-4">
+            <HistoryCard
+              delay={0.1}
+              title="1. 문화예술교육 기획 및 총괄 운영 (전국)"
+              items={[
+                "범국가적 지원사업 수행: 문체부·국방부 주관 '군부대 문화예술교육' 음악 분야 총괄 기획 및 운영",
+                "육·해·공군 맞춤형 교육: 전국 전방 부대 및 격오지 대상 수십여 개 맞춤형 커리큘럼 설계",
+                "특수 공공기관 교육: 용산경찰서 밴드 강사 파견 및 김포 교육청 '기초학력심리센터' 전담 교육",
+                "서울문화재단 전략 프로젝트: 17개 혁신 예술교육 모델(상상음악공장, 뮤지컬 등) 개발 및 보급"
+              ]}
+            />
+            <HistoryCard
+              delay={0.2}
+              title="2. 장르 통합형 창의 융합 예술 실적"
+              items={[
+                "수도권 수십여 개교 장기 프로젝트: 동작초(전교생 창의예술체험), 지평초 등 정규 프로그램 운영",
+                "지자체 교육지원사업: 서울시(동작·은평·성북), 경기도(김포·시흥) 관내 학교 및 센터 연계",
+                "인문·문학 융합 교육: '예술동화탐험' 시리즈를 통한 독서 창작과 시각/음악 활동 복합 설계",
+                "미디어 기반 통합 교육: 스마트폰 중독 예방 '밴드 융합 소리놀이' 및 청소년 예술 치유 캠프"
+              ]}
+            />
+            <HistoryCard
+              delay={0.3}
+              title="3. 시니어 특화 및 생애주기별 정서지원"
+              items={[
+                "고위험군 시니어 전문 교육: 고양시 대화노인복지관 우울증 및 자살 고위험군(F진단) 정서지원",
+                "수도권 주요 복지관 거점 활동: 동작, 중계, 서초, 분당 등 노인종합복지관 상설 교육 진행",
+                "특수 케어 및 데이케어: 성심치매노인기관, 역촌데이케어센터, 한우리정보문화센터 지원",
+                "가족 보호자 지원: 서초구청 '치매 부양 가족을 위한 예술 정서요법' 등 특화 프로그램"
+              ]}
+            />
+            <HistoryCard
+              delay={0.4}
+              title="4. 기업 사회공헌(CSR) 및 의료기관 프로젝트"
+              items={[
+                "글로벌 기업 협력: 사노피 아벤티스('싱싱엔돌픈'), GS칼텍스, 대웅제약 예술 솔루션 제공",
+                "주요 대학병원 정서지원: 한강성심(정신과), 여의도성모, 한양대, 고려대 암센터 프로젝트",
+                "사회복지재단 연계: 삼성꿈장학재단, 초록우산 어린이재단 등 취약계층 예술 복지 실현"
+              ]}
+            />
           </div>
         </motion.div>
 
