@@ -162,6 +162,7 @@ const HistoryCard: React.FC<{ title: string; items: React.ReactNode[]; delay: nu
   </motion.div>
 );
 
+
 const About: React.FC = () => {
   const [isQuoteHovered, setIsQuoteHovered] = useState(false);
   const [showHistory, setShowHistory] = useState(false);
@@ -254,7 +255,6 @@ const About: React.FC = () => {
                 <StatItem label="만족도" value="97%" />
               </motion.div>
 
-              {/* History Toggle Button */}
               <div className="pt-6">
                 <motion.button
                   whileHover={{ scale: 1.02 }}
@@ -277,7 +277,6 @@ const About: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Expandable History Section */}
         <motion.div
           initial={false}
           animate={{ height: showHistory ? "auto" : 0, opacity: showHistory ? 1 : 0 }}
@@ -475,7 +474,6 @@ const About: React.FC = () => {
 
             {/* Expandable Sections Below */}
             <div className="mt-12 space-y-12">
-              {/* Philosophy Section */}
               <motion.div
                 initial={false}
                 animate={{ height: showPhilosophy ? "auto" : 0, opacity: showPhilosophy ? 1 : 0 }}
@@ -523,7 +521,6 @@ const About: React.FC = () => {
                 </div>
               </motion.div>
 
-              {/* Expertise Section */}
               <motion.div
                 initial={false}
                 animate={{ height: showExpertise ? "auto" : 0, opacity: showExpertise ? 1 : 0 }}
@@ -600,117 +597,6 @@ const About: React.FC = () => {
                   </div>
                 </div>
               </motion.div>
-            </div>
-
-
-                <div className="text-center space-y-2">
-                  <h4 className="text-3xl md:text-4xl font-black text-neutral-900 font-gothic tracking-tighter">이성경</h4>
-                  <p className="text-blue-600 font-black text-[11px] tracking-[0.4em] uppercase font-gothic">Art Director</p>
-
-                  <div className="pt-8">
-                    <motion.a
-                      href={PROF_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="inline-flex items-center gap-4 bg-white border border-neutral-100 px-8 py-4 rounded-full shadow-sm hover:shadow-md transition-all group"
-                    >
-                      <span className="text-[10px] font-black tracking-[0.2em] uppercase text-neutral-800 font-gothic">Profile Archive</span>
-                      <div className="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-white">
-                        <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                        </svg>
-                      </div>
-                    </motion.a>
-                  </div>
-                </div>
-              </div>
-
-              {/* Right Column: Narrative Dashboard */}
-              <div className="space-y-12">
-                {/* 1. Director Insight (Quote) */}
-                <div className="border-b border-neutral-100 pb-10">
-                  <h5 className="text-[10px] font-black text-neutral-300 uppercase tracking-[0.4em] mb-6 font-gothic">Director Insight</h5>
-                  <div
-                    className="relative cursor-default"
-                    onMouseEnter={() => setIsQuoteHovered(true)}
-                    onMouseLeave={() => setIsQuoteHovered(false)}
-                  >
-                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                      {[...Array(16)].map((_, i) => (
-                        <GoldSparkle key={i} index={i} isHovered={isQuoteHovered} />
-                      ))}
-                    </div>
-                    <motion.p
-                      animate={{
-                        color: isQuoteHovered ? "#EAB308" : "#171717",
-                        scale: isQuoteHovered ? 1.02 : 1,
-                      }}
-                      transition={{ duration: 0.4 }}
-                      className="text-2xl md:text-[36px] font-black leading-[1.3] font-gothic tracking-tight"
-                    >
-                      "예술의 따스한 숨결이 머무는 곳,<br />
-                      당신의 삶을 평온하게 다독입니다."
-                    </motion.p>
-                  </div>
-                </div>
-
-                {/* 2. Biography & Philosophy Split */}
-                <div className="grid lg:grid-cols-2 gap-10">
-                  {/* 약력 */}
-                  <div className="space-y-6">
-                    <h6 className="text-[12px] font-black text-neutral-900 flex items-center gap-3 font-gothic uppercase tracking-widest">
-                      <span className="w-4 h-[2px] bg-blue-600"></span> 주요 약력
-                    </h6>
-                    <ul className="text-[14px] text-neutral-500 space-y-3 font-medium leading-relaxed">
-                      <li>• 이화여자대학교 교육대학원 음악치료 교육학과 졸업</li>
-                      <li>• 이화여자대학교 문화예술교육원 무용학/음악학 수료</li>
-                      <li>• 연세대학교 신학과 졸업</li>
-                      <li className="font-bold text-neutral-800">• 前) 국방부 문화예술교육 총괄 기획자</li>
-                      <li className="font-bold text-neutral-800">• 前) 서울디지털대학교 음악교육 반주법 교수</li>
-                      <li>• 前) 이화여자대학교 예술교육연구소 연구원</li>
-                    </ul>
-                  </div>
-
-                  {/* Philosophy Snapshot */}
-                  <div className="bg-neutral-50/50 rounded-[2rem] p-8 border border-neutral-100 space-y-4">
-                    <span className="text-[11px] font-black text-blue-600 uppercase tracking-widest block font-gothic">Director's Philosophy</span>
-                    <p className="text-[14px] text-neutral-800 leading-relaxed font-bold italic border-l-2 border-blue-200 pl-4 mb-4">
-                      “음악의 본질적 힘을 매개로, 일상과 예술을 잇는 통합적 교육 모델을 실천합니다.”
-                    </p>
-                    <p className="text-[13px] text-neutral-500 leading-relaxed">
-                      15년의 시간 동안 Music Therapy의 토대 위에서 예술의 치유적 온기를 보편적 교육으로 녹여내는 데 집중해 왔습니다.
-                    </p>
-                  </div>
-                </div>
-
-                {/* 3. Expertise Directory Integration */}
-                <div className="pt-4 space-y-10">
-                  <div className="flex items-center justify-between">
-                    <h6 className="text-[12px] font-black text-neutral-900 flex items-center gap-3 font-gothic uppercase tracking-widest">
-                      <span className="w-4 h-[2px] bg-blue-600"></span> 전문 역량 (Expertise)
-                    </h6>
-                  </div>
-
-                  <div className="grid sm:grid-cols-2 gap-6">
-                    {[
-                      { icon: "01", title: "핵심 전문성", desc: "KCMT 음악중재전문가 전문 자격, 이화여대 연구원 과정 수료" },
-                      { icon: "02", title: "예술적 확장", desc: "무용/체형교정/영어발레 지도사 자격, 신체 중심 교육 체계" },
-                      { icon: "03", title: "교육적 통찰", desc: "인성지도사, 미술심리상담사 등 다학제적 통합 커리큘럼 설계" },
-                      { icon: "04", title: "글로벌 연구", desc: "Nordoff-Robbins 수료, SPSS 데이터 기반 효과성 분석 전문" }
-                    ].map((item, idx) => (
-                      <div key={idx} className="bg-white border border-neutral-100 p-6 rounded-[1.5rem] shadow-sm hover:shadow-md transition-all space-y-3 group">
-                        <div className="flex items-center gap-3">
-                          <span className="text-[10px] font-black text-blue-600 font-gothic w-6 h-6 rounded-lg bg-blue-50 flex items-center justify-center">{item.icon}</span>
-                          <span className="text-[14px] font-black text-neutral-800 font-gothic tracking-tight">{item.title}</span>
-                        </div>
-                        <p className="text-[13px] text-neutral-500 leading-snug pl-9">{item.desc}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
             </div>
           </motion.div>
         </div>
