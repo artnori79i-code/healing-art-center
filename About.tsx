@@ -416,7 +416,7 @@ const About: React.FC = () => {
                   </div>
 
                   <ul className="text-[13px] md:text-[14px] text-neutral-500 space-y-2.5 font-medium leading-tight text-left">
-                    <li>• 이화여자대학교 교육대학원 문화예술교육(음악) 졸업</li>
+                    <li>• 이화여자대학교 교육대학원 음악치료 교육학과 졸업</li>
                     <li>• 이화여자대학교 문화예술교육원 무용학/음악학 수료</li>
                     <li>• 연세대학교 신학과 졸업</li>
                     <li className="font-bold text-neutral-800">• 前) 국방부 문화예술교육 총괄 기획자</li>
