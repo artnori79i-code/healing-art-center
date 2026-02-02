@@ -445,7 +445,7 @@ const About: React.FC = () => {
                     }}
                     className={`flex items-center justify-between px-6 py-5 rounded-full transition-all shadow-sm hover:shadow-md border ${showPhilosophy ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-neutral-800 border-neutral-100'}`}
                   >
-                    <span className="text-[9px] font-black tracking-[0.1em] uppercase">Director's Philosophy</span>
+                    <span className="text-[10px] font-black tracking-wider uppercase">교육철학</span>
                     <motion.div animate={{ rotate: showPhilosophy ? 180 : 0 }}>
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
