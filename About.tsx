@@ -164,8 +164,9 @@ const HistoryCard: React.FC<{ title: string; items: React.ReactNode[]; delay: nu
 );
 
 const About: React.FC = () => {
-  const [isQuoteHovered, setIsQuoteHovered] = React.useState(false);
   const [showHistory, setShowHistory] = React.useState(false);
+  const [showPhilosophy, setShowPhilosophy] = React.useState(false);
+  const [showExpertise, setShowExpertise] = React.useState(false);
   const { scrollYProgress } = useScroll();
   const profileRotate = useTransform(scrollYProgress, [0.1, 0.4], [-2, 2]);
   const profileY = useTransform(scrollYProgress, [0.1, 0.4], [0, -30]);
@@ -399,9 +400,20 @@ const About: React.FC = () => {
                 </div>
 
                 <div className="space-y-4">
-                  <h6 className="text-[12px] font-black text-neutral-900 flex items-center justify-start gap-3 font-gothic uppercase tracking-widest">
-                    <span className="w-4 h-[2px] bg-blue-600"></span> 주요 약력
-                  </h6>
+                  <div className="flex items-center justify-between">
+                    <h6 className="text-[12px] font-black text-neutral-900 flex items-center justify-start gap-3 font-gothic uppercase tracking-widest">
+                      <span className="w-4 h-[2px] bg-blue-600"></span> 주요 약력
+                    </h6>
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      onClick={() => setShowPhilosophy(!showPhilosophy)}
+                      className="text-[10px] font-bold text-blue-600 border-b border-blue-600/30 pb-0.5"
+                    >
+                      {showPhilosophy ? "필로소피 닫기" : "Director's Philosophy"}
+                    </motion.button>
+                  </div>
+
                   <ul className="text-[13px] md:text-[14px] text-neutral-500 space-y-2.5 font-medium leading-tight text-left">
                     <li>• 이화여자대학교 교육대학원 문화예술교육(음악) 졸업</li>
                     <li>• 이화여자대학교 문화예술교육원 무용학/음악학 수료</li>
@@ -410,24 +422,133 @@ const About: React.FC = () => {
                     <li className="font-bold text-neutral-800">• 前) 서울디지털대학교 음악교육 반주법 교수</li>
                     <li>• 前) 이화여자대학교 예술교육연구소 연구원</li>
                   </ul>
+
+                  {/* Philosophy Accordion */}
+                  <motion.div
+                    initial={false}
+                    animate={{ height: showPhilosophy ? "auto" : 0, opacity: showPhilosophy ? 1 : 0 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="bg-neutral-50 rounded-2xl p-6 mt-4 border border-neutral-100 space-y-4">
+                      <h7 className="text-[13px] font-black text-neutral-900 block mb-2 font-gothic tracking-tight">[Director’s Philosophy: 통합 예술교육을 향한 15년의 사유]</h7>
+                      <p className="text-[13px] text-neutral-600 leading-relaxed italic border-l-2 border-blue-200 pl-4">
+                        “음악의 본질적 힘을 매개로, 일상과 예술을 잇는 통합적 교육 모델을 실천합니다.”
+                      </p>
+                      <p className="text-[13px] text-neutral-500 leading-relaxed">
+                        저는 지난 15년이라는 시간 동안, 음악이 지닌 단단한 구조적 아름다움과 따스한 정서적 위로가 어떻게 다른 예술 장르, 그리고 우리 삶의 교육적 가치와 맞닿을 수 있을지 깊이 고민해 왔습니다. 학문적으로는 'Music Therapy'라는 토대 위에서 성장했으며, 이를 우리 곁의 보편적인 문화예술교육 안에서 그 치유적 온기로 자연스럽게 녹여내고자 마음을 다해왔습니다.
+                      </p>
+                      <div className="space-y-4 pt-2">
+                        <div>
+                          <span className="text-[12px] font-bold text-neutral-900 block mb-1">감각의 확장과 융합</span>
+                          <p className="text-[12px] text-neutral-500 leading-relaxed">음악의 리듬과 선율이 신체의 부드러운 움직임이 되고, 다시 시각적인 형상화와 인문학적 성찰로 이어지는 <b>'통합예술교육'</b>을 연구합니다. 이러한 고유의 교수법을 현장에 조심스럽게 적용하며 예술의 경계가 허물어지는 지점을 발견해 왔습니다.</p>
+                        </div>
+                        <div>
+                          <span className="text-[12px] font-bold text-neutral-900 block mb-1">일상의 예술화</span>
+                          <p className="text-[12px] text-neutral-500 leading-relaxed">예술은 특별한 재능을 가진 이들만의 영역이 아니라고 믿습니다. 평범한 개인의 일상을 미학적으로 재해석하고 소중하게 기록하는 따스한 교육적 도구로 활용될 수 있도록, 예술의 문턱을 낮추고 그 깊이를 채우는 데 집중합니다.</p>
+                        </div>
+                        <div>
+                          <span className="text-[12px] font-bold text-neutral-900 block mb-1">현장의 집요함</span>
+                          <p className="text-[12px] text-neutral-500 leading-relaxed">15년 동안 현장에서 마주한 수많은 삶의 결들은 저에게 큰 가르침을 주었습니다. 예술이 단순히 지식을 전달하는 것을 넘어, 사람의 마음을 보듬고 우리 공동체를 회복시키는 '문화적 처방'이 될 수 있음을 매 순간 가슴으로 체득해 왔습니다.</p>
+                        </div>
+                      </div>
+                      <p className="text-[12px] text-neutral-600 font-bold pt-2">
+                        거창한 성과를 내세우기보다는, 예술의 온기가 필요한 곳에서 참여자분들과 함께 숨 쉬며 지속 가능한 통합 예술교육의 모델을 겸허히 실천해 나가겠습니다.
+                      </p>
+                    </div>
+                  </motion.div>
                 </div>
 
-                <div className="pt-4 flex justify-start">
-                  <motion.a
-                    href={PROF_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="inline-flex items-center gap-4 bg-white border border-neutral-100 px-8 py-4 rounded-full shadow-sm hover:shadow-md transition-all group"
+                <div className="pt-2">
+                  <div className="flex gap-4">
+                    <motion.a
+                      href={PROF_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="flex-1 inline-flex items-center justify-between bg-white border border-neutral-100 px-6 py-4 rounded-full shadow-sm hover:shadow-md transition-all group"
+                    >
+                      <span className="text-[10px] font-black tracking-[0.2em] uppercase text-neutral-800 font-gothic">Profile Archive</span>
+                      <div className="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-white">
+                        <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                      </div>
+                    </motion.a>
+
+                    <motion.button
+                      onClick={() => setShowExpertise(!showExpertise)}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className={`flex-1 px-6 py-4 rounded-full font-black text-[10px] tracking-[0.2em] uppercase transition-all shadow-sm ${showExpertise ? 'bg-blue-600 text-white shadow-blue-200' : 'bg-neutral-900 text-white'}`}
+                    >
+                      Professional Expertise
+                    </motion.button>
+                  </div>
+
+                  {/* Expertise Detail Section */}
+                  <motion.div
+                    initial={false}
+                    animate={{ height: showExpertise ? "auto" : 0, opacity: showExpertise ? 1 : 0 }}
+                    className="overflow-hidden"
                   >
-                    <span className="text-[10px] font-black tracking-[0.2em] uppercase text-neutral-800 font-gothic">Profile Archive</span>
-                    <div className="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-white">
-                      <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                      </svg>
+                    <div className="bg-white rounded-[2rem] p-8 mt-6 border border-neutral-100 shadow-xl space-y-8">
+                      <div className="text-center space-y-2 pb-4 border-b border-neutral-50">
+                        <span className="text-blue-600 font-black text-[10px] tracking-widest uppercase block">Expertise Directory</span>
+                        <h8 className="text-lg font-black text-neutral-900 block font-gothic tracking-tight">“음악적 본질을 바탕으로 예술의 경계를 넓히는 통합 예술교육가”</h8>
+                      </div>
+
+                      <div className="grid md:grid-cols-2 gap-8">
+                        <div className="space-y-4">
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 rounded-full bg-blue-600"></div>
+                            <h9 className="text-[13px] font-black text-neutral-900 uppercase tracking-wider font-gothic">핵심 전문성 (Core Expertise)</h9>
+                          </div>
+                          <ul className="text-[12px] text-neutral-500 space-y-2 pl-5 leading-relaxed">
+                            <li>• <b>KCMT(음악중재전문가)</b> 전문 Music Therapist 자격 보유</li>
+                            <li>• 이화여자대학교 교육대학원 연구원 과정 수료</li>
+                            <li>• 음악의 구조적 요소를 교육적 매개체로 활용하는 <b>통합문화예술교육 교수법</b> 구축</li>
+                          </ul>
+                        </div>
+
+                        <div className="space-y-4">
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 rounded-full bg-blue-600"></div>
+                            <h9 className="text-[13px] font-black text-neutral-900 uppercase tracking-wider font-gothic">예술적 외연 확장 (Artistic Expansion)</h9>
+                          </div>
+                          <ul className="text-[12px] text-neutral-500 space-y-2 pl-5 leading-relaxed">
+                            <li className="text-[11px] text-blue-600/80 font-bold mb-1 italic">Ewha Arts & Culture Education Center / Institute for Continuing Education</li>
+                            <li>• 무용지도사 / 체형교정발레 지도사 / 영어발레 지도사</li>
+                            <li>• <b>신체 중심 교육(Movement-based Education)</b> 체례 수립</li>
+                            <li>• 서울 이화여자대학교 유아아동무용지도사(영어발레) 수료</li>
+                          </ul>
+                        </div>
+
+                        <div className="space-y-4">
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 rounded-full bg-blue-600"></div>
+                            <h9 className="text-[13px] font-black text-neutral-900 uppercase tracking-wider font-gothic">교육적 통찰 (Educational Insight)</h9>
+                          </div>
+                          <ul className="text-[12px] text-neutral-500 space-y-2 pl-5 leading-relaxed">
+                            <li>• <b>인성지도사, 미술심리상담사, 독서성품지도사</b> 자격증 보유</li>
+                            <li>• 예술 활동 내면의 심미적 경험을 인문학적 성품과 자기 주도적 창의성으로 연결하는 통합 커리큘럼 설계</li>
+                          </ul>
+                        </div>
+
+                        <div className="space-y-4">
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 rounded-full bg-blue-600"></div>
+                            <h9 className="text-[13px] font-black text-neutral-900 uppercase tracking-wider font-gothic">글로벌 학술 연구 (Global Research)</h9>
+                          </div>
+                          <ul className="text-[12px] text-neutral-500 space-y-2 pl-5 leading-relaxed">
+                            <li>• <b>Nordoff-Robbins Music Therapy Program</b>, Clive Robbins 워크숍 수료</li>
+                            <li>• Music Therapy 양적 연구방법(<b>SPSS 데이터 분석</b>) 전문 과정 수료</li>
+                            <li>• 예술교육 효과성의 데이터 기반 분석적 접근</li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
-                  </motion.a>
+                  </motion.div>
                 </div>
               </div>
             </div>
