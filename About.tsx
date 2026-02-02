@@ -166,8 +166,6 @@ const HistoryCard: React.FC<{ title: string; items: React.ReactNode[]; delay: nu
 const About: React.FC = () => {
   const [isQuoteHovered, setIsQuoteHovered] = React.useState(false);
   const [showHistory, setShowHistory] = React.useState(false);
-  const [showPhilosophy, setShowPhilosophy] = React.useState(false);
-  const [showExpertise, setShowExpertise] = React.useState(false);
   const { scrollYProgress } = useScroll();
   const profileRotate = useTransform(scrollYProgress, [0.1, 0.4], [-2, 2]);
   const profileY = useTransform(scrollYProgress, [0.1, 0.4], [0, -30]);
@@ -405,14 +403,6 @@ const About: React.FC = () => {
                     <h6 className="text-[12px] font-black text-neutral-900 flex items-center justify-start gap-3 font-gothic uppercase tracking-widest">
                       <span className="w-4 h-[2px] bg-blue-600"></span> 주요 약력
                     </h6>
-                    <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      onClick={() => setShowPhilosophy(!showPhilosophy)}
-                      className="text-[10px] font-bold text-blue-600 border-b border-blue-600/30 pb-0.5"
-                    >
-                      {showPhilosophy ? "필로소피 닫기" : "Director's Philosophy"}
-                    </motion.button>
                   </div>
 
                   <ul className="text-[13px] md:text-[14px] text-neutral-500 space-y-2.5 font-medium leading-tight text-left">
