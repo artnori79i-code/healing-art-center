@@ -462,7 +462,7 @@ const About: React.FC = () => {
                     }}
                     className={`flex items-center justify-between px-6 py-5 rounded-full transition-all shadow-sm hover:shadow-md ${showExpertise ? 'bg-blue-600 text-white' : 'bg-neutral-900 text-white'}`}
                   >
-                    <span className="text-[9px] font-black tracking-[0.1em] uppercase">Professional Expertise</span>
+                    <span className="text-[10px] font-black tracking-wider uppercase">전문 자격 및 역량</span>
                     <motion.div animate={{ rotate: showExpertise ? 180 : 0 }}>
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
@@ -521,7 +521,7 @@ const About: React.FC = () => {
                 <div className="bg-white rounded-[2.5rem] p-8 md:p-14 border border-neutral-100 shadow-xl space-y-12">
                   <div className="space-y-2">
                     <h2 className="text-xl md:text-2xl font-black text-neutral-900 font-gothic tracking-tighter">
-                      Professional Expertise Directory
+                      전문 자격 및 핵심 역량
                     </h2>
                     <div className="w-8 h-[2px] bg-blue-600" />
                     <p className="text-[13px] text-neutral-400 font-medium italic">“음악적 본질을 바탕으로 예술의 경계를 넓히는 통합 예술교육가”</p>
