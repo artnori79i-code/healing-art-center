@@ -163,6 +163,7 @@ const HistoryCard: React.FC<{ title: string; items: React.ReactNode[]; delay: nu
 );
 
 
+
 const About: React.FC = () => {
   const [isQuoteHovered, setIsQuoteHovered] = useState(false);
   const [showHistory, setShowHistory] = useState(false);
@@ -473,13 +474,13 @@ const About: React.FC = () => {
             </div>
 
             {/* Expandable Sections Below */}
-                        <div className="mt-12 space-y-12">
+            <div className="mt-12 space-y-12">
               <motion.div
                 initial={false}
                 animate={{ height: showPhilosophy ? "auto" : 0, opacity: showPhilosophy ? 1 : 0 }}
                 className="overflow-hidden"
               >
-                <div className="bg-neutral-50/50 rounded-[2rem] p-8 md:p-14 border border-neutral-100 space-y-10">
+                <div className="bg-neutral-50/50 rounded-[2.5rem] p-8 md:p-14 border border-neutral-100 space-y-10">
                   <div className="space-y-2">
                     <h2 className="text-xl md:text-2xl font-black text-neutral-900 font-gothic tracking-tighter">
                       통합 예술교육을 향한 15년의 사유
@@ -523,7 +524,7 @@ const About: React.FC = () => {
                 animate={{ height: showExpertise ? "auto" : 0, opacity: showExpertise ? 1 : 0 }}
                 className="overflow-hidden"
               >
-                <div className="bg-white rounded-[2rem] p-8 md:p-14 border border-neutral-100 shadow-xl space-y-12">
+                <div className="bg-white rounded-[2.5rem] p-8 md:p-14 border border-neutral-100 shadow-xl space-y-12">
                   <div className="space-y-2">
                     <h2 className="text-xl md:text-2xl font-black text-neutral-900 font-gothic tracking-tighter">
                       Professional Expertise Directory
@@ -557,7 +558,7 @@ const About: React.FC = () => {
                   </div>
                 </div>
               </motion.div>
-            </div></div>
+            </div>
           </motion.div>
         </div>
       </div>
