@@ -443,14 +443,16 @@ const About: React.FC = () => {
                       setShowPhilosophy(!showPhilosophy);
                       setShowExpertise(false);
                     }}
-                    className={`flex items-center justify-between px-6 py-5 rounded-full transition-all shadow-sm hover:shadow-md border ${showPhilosophy ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-neutral-800 border-neutral-100'}`}
+                    className="flex items-center justify-between px-6 py-5 rounded-full bg-white border border-neutral-100 shadow-sm hover:shadow-md transition-all group"
                   >
-                    <span className="text-[10px] font-black tracking-wider uppercase">교육철학</span>
-                    <motion.div animate={{ rotate: showPhilosophy ? 180 : 0 }}>
-                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </motion.div>
+                    <span className={`text-[10px] font-black tracking-wider uppercase transition-colors ${showPhilosophy ? 'text-blue-600' : 'text-neutral-800'}`}>교육철학</span>
+                    <div className="w-6 h-6 rounded-full bg-blue-600 flex items-center justify-center text-white">
+                      <motion.div animate={{ rotate: showPhilosophy ? 180 : 0 }}>
+                        <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </motion.div>
+                    </div>
                   </motion.button>
 
                   <motion.button
@@ -460,14 +462,16 @@ const About: React.FC = () => {
                       setShowExpertise(!showExpertise);
                       setShowPhilosophy(false);
                     }}
-                    className={`flex items-center justify-between px-6 py-5 rounded-full transition-all shadow-sm hover:shadow-md ${showExpertise ? 'bg-blue-600 text-white' : 'bg-neutral-900 text-white'}`}
+                    className="flex items-center justify-between px-6 py-5 rounded-full bg-white border border-neutral-100 shadow-sm hover:shadow-md transition-all group"
                   >
-                    <span className="text-[10px] font-black tracking-wider uppercase">전문 자격 및 역량</span>
-                    <motion.div animate={{ rotate: showExpertise ? 180 : 0 }}>
-                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </motion.div>
+                    <span className={`text-[10px] font-black tracking-wider uppercase transition-colors ${showExpertise ? 'text-blue-600' : 'text-neutral-800'}`}>전문 자격 및 역량</span>
+                    <div className="w-6 h-6 rounded-full bg-blue-600 flex items-center justify-center text-white">
+                      <motion.div animate={{ rotate: showExpertise ? 180 : 0 }}>
+                        <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </motion.div>
+                    </div>
                   </motion.button>
                 </div>
               </div>
