@@ -164,6 +164,7 @@ const HistoryCard: React.FC<{ title: string; items: React.ReactNode[]; delay: nu
 );
 
 const About: React.FC = () => {
+  const [isQuoteHovered, setIsQuoteHovered] = React.useState(false);
   const [showHistory, setShowHistory] = React.useState(false);
   const [showPhilosophy, setShowPhilosophy] = React.useState(false);
   const [showExpertise, setShowExpertise] = React.useState(false);
@@ -430,7 +431,7 @@ const About: React.FC = () => {
                     className="overflow-hidden"
                   >
                     <div className="bg-neutral-50 rounded-2xl p-6 mt-4 border border-neutral-100 space-y-4">
-                      <h7 className="text-[13px] font-black text-neutral-900 block mb-2 font-gothic tracking-tight">[Director’s Philosophy: 통합 예술교육을 향한 15년의 사유]</h7>
+                      <span className="text-[13px] font-black text-neutral-900 block mb-2 font-gothic tracking-tight">[Director’s Philosophy: 통합 예술교육을 향한 15년의 사유]</span>
                       <p className="text-[13px] text-neutral-600 leading-relaxed italic border-l-2 border-blue-200 pl-4">
                         “음악의 본질적 힘을 매개로, 일상과 예술을 잇는 통합적 교육 모델을 실천합니다.”
                       </p>
@@ -495,14 +496,14 @@ const About: React.FC = () => {
                     <div className="bg-white rounded-[2rem] p-8 mt-6 border border-neutral-100 shadow-xl space-y-8">
                       <div className="text-center space-y-2 pb-4 border-b border-neutral-50">
                         <span className="text-blue-600 font-black text-[10px] tracking-widest uppercase block">Expertise Directory</span>
-                        <h8 className="text-lg font-black text-neutral-900 block font-gothic tracking-tight">“음악적 본질을 바탕으로 예술의 경계를 넓히는 통합 예술교육가”</h8>
+                        <span className="text-lg font-black text-neutral-900 block font-gothic tracking-tight">“음악적 본질을 바탕으로 예술의 경계를 넓히는 통합 예술교육가”</span>
                       </div>
 
                       <div className="grid md:grid-cols-2 gap-8">
                         <div className="space-y-4">
                           <div className="flex items-center gap-3">
                             <div className="w-2 h-2 rounded-full bg-blue-600"></div>
-                            <h9 className="text-[13px] font-black text-neutral-900 uppercase tracking-wider font-gothic">핵심 전문성 (Core Expertise)</h9>
+                            <span className="text-[13px] font-black text-neutral-900 uppercase tracking-wider font-gothic">핵심 전문성 (Core Expertise)</span>
                           </div>
                           <ul className="text-[12px] text-neutral-500 space-y-2 pl-5 leading-relaxed">
                             <li>• <b>KCMT(음악중재전문가)</b> 전문 Music Therapist 자격 보유</li>
@@ -514,7 +515,7 @@ const About: React.FC = () => {
                         <div className="space-y-4">
                           <div className="flex items-center gap-3">
                             <div className="w-2 h-2 rounded-full bg-blue-600"></div>
-                            <h9 className="text-[13px] font-black text-neutral-900 uppercase tracking-wider font-gothic">예술적 외연 확장 (Artistic Expansion)</h9>
+                            <span className="text-[13px] font-black text-neutral-900 uppercase tracking-wider font-gothic">예술적 외연 확장 (Artistic Expansion)</span>
                           </div>
                           <ul className="text-[12px] text-neutral-500 space-y-2 pl-5 leading-relaxed">
                             <li className="text-[11px] text-blue-600/80 font-bold mb-1 italic">Ewha Arts & Culture Education Center / Institute for Continuing Education</li>
@@ -527,7 +528,7 @@ const About: React.FC = () => {
                         <div className="space-y-4">
                           <div className="flex items-center gap-3">
                             <div className="w-2 h-2 rounded-full bg-blue-600"></div>
-                            <h9 className="text-[13px] font-black text-neutral-900 uppercase tracking-wider font-gothic">교육적 통찰 (Educational Insight)</h9>
+                            <span className="text-[13px] font-black text-neutral-900 uppercase tracking-wider font-gothic">교육적 통찰 (Educational Insight)</span>
                           </div>
                           <ul className="text-[12px] text-neutral-500 space-y-2 pl-5 leading-relaxed">
                             <li>• <b>인성지도사, 미술심리상담사, 독서성품지도사</b> 자격증 보유</li>
@@ -538,7 +539,7 @@ const About: React.FC = () => {
                         <div className="space-y-4">
                           <div className="flex items-center gap-3">
                             <div className="w-2 h-2 rounded-full bg-blue-600"></div>
-                            <h9 className="text-[13px] font-black text-neutral-900 uppercase tracking-wider font-gothic">글로벌 학술 연구 (Global Research)</h9>
+                            <span className="text-[13px] font-black text-neutral-900 uppercase tracking-wider font-gothic">글로벌 학술 연구 (Global Research)</span>
                           </div>
                           <ul className="text-[12px] text-neutral-500 space-y-2 pl-5 leading-relaxed">
                             <li>• <b>Nordoff-Robbins Music Therapy Program</b>, Clive Robbins 워크숍 수료</li>
