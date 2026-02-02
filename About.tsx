@@ -493,55 +493,71 @@ const About: React.FC = () => {
                     animate={{ height: showExpertise ? "auto" : 0, opacity: showExpertise ? 1 : 0 }}
                     className="overflow-hidden"
                   >
-                    <div className="bg-white rounded-[2rem] p-8 mt-6 border border-neutral-100 shadow-xl space-y-8">
-                      <div className="text-center space-y-2 pb-4 border-b border-neutral-50">
+                    <div className="bg-white rounded-[2rem] p-6 md:p-10 mt-6 border border-neutral-100 shadow-xl space-y-10">
+                      <div className="text-center space-y-3 pb-6 border-b border-neutral-100">
                         <span className="text-blue-600 font-black text-[10px] tracking-widest uppercase block">Expertise Directory</span>
-                        <span className="text-lg font-black text-neutral-900 block font-gothic tracking-tight">“음악적 본질을 바탕으로 예술의 경계를 넓히는 통합 예술교육가”</span>
+                        <span className="text-lg md:text-xl font-black text-neutral-900 block font-gothic tracking-tight">“음악적 본질을 바탕으로 예술의 경계를 넓히는 통합 예술교육가”</span>
                       </div>
 
-                      <div className="grid md:grid-cols-2 gap-8">
+                      <div className="space-y-12">
+                        {/* 1. Core Expertise */}
                         <div className="space-y-4">
-                          <div className="flex items-center gap-3">
-                            <div className="w-2 h-2 rounded-full bg-blue-600"></div>
-                            <span className="text-[13px] font-black text-neutral-900 uppercase tracking-wider font-gothic">핵심 전문성 (Core Expertise)</span>
+                          <div className="flex items-center gap-3 mb-2">
+                            <div className="w-6 h-6 rounded-lg bg-blue-50 flex items-center justify-center">
+                              <div className="w-1.5 h-1.5 rounded-full bg-blue-600"></div>
+                            </div>
+                            <span className="text-[14px] font-black text-neutral-900 uppercase tracking-wider font-gothic">핵심 전문성 (Core Expertise)</span>
                           </div>
-                          <ul className="text-[12px] text-neutral-500 space-y-2 pl-5 leading-relaxed">
+                          <ul className="text-[13px] text-neutral-500 space-y-2.5 pl-9 leading-relaxed">
                             <li>• <b>KCMT(음악중재전문가)</b> 전문 Music Therapist 자격 보유</li>
                             <li>• 이화여자대학교 교육대학원 연구원 과정 수료</li>
                             <li>• 음악의 구조적 요소를 교육적 매개체로 활용하는 <b>통합문화예술교육 교수법</b> 구축</li>
                           </ul>
                         </div>
 
+                        {/* 2. Artistic Expansion */}
                         <div className="space-y-4">
-                          <div className="flex items-center gap-3">
-                            <div className="w-2 h-2 rounded-full bg-blue-600"></div>
-                            <span className="text-[13px] font-black text-neutral-900 uppercase tracking-wider font-gothic">예술적 외연 확장 (Artistic Expansion)</span>
+                          <div className="flex items-center gap-3 mb-2">
+                            <div className="w-6 h-6 rounded-lg bg-blue-50 flex items-center justify-center">
+                              <div className="w-1.5 h-1.5 rounded-full bg-blue-600"></div>
+                            </div>
+                            <span className="text-[14px] font-black text-neutral-900 uppercase tracking-wider font-gothic">예술적 외연 확장 (Artistic Expansion)</span>
                           </div>
-                          <ul className="text-[12px] text-neutral-500 space-y-2 pl-5 leading-relaxed">
-                            <li className="text-[11px] text-blue-600/80 font-bold mb-1 italic">Ewha Arts & Culture Education Center / Institute for Continuing Education</li>
-                            <li>• 무용지도사 / 체형교정발레 지도사 / 영어발레 지도사</li>
-                            <li>• <b>신체 중심 교육(Movement-based Education)</b> 체례 수립</li>
-                            <li>• 서울 이화여자대학교 유아아동무용지도사(영어발레) 수료</li>
-                          </ul>
+                          <div className="pl-9 space-y-3">
+                            <div className="text-[11px] text-blue-600/70 font-bold italic tracking-tight">
+                              Ewha Arts & Culture Education Center / Institute for Continuing Education
+                            </div>
+                            <ul className="text-[13px] text-neutral-500 space-y-2.5 leading-relaxed">
+                              <li>• 무용지도사 / 체형교정발레 지도사 / 영어발레 지도사</li>
+                              <li>• <b>신체 중심 교육(Movement-based Education)</b> 체계 수립</li>
+                              <li>• 이화여자대학교 유아아동무용지도사 자격</li>
+                            </ul>
+                          </div>
                         </div>
 
+                        {/* 3. Educational Insight */}
                         <div className="space-y-4">
-                          <div className="flex items-center gap-3">
-                            <div className="w-2 h-2 rounded-full bg-blue-600"></div>
-                            <span className="text-[13px] font-black text-neutral-900 uppercase tracking-wider font-gothic">교육적 통찰 (Educational Insight)</span>
+                          <div className="flex items-center gap-3 mb-2">
+                            <div className="w-6 h-6 rounded-lg bg-blue-50 flex items-center justify-center">
+                              <div className="w-1.5 h-1.5 rounded-full bg-blue-600"></div>
+                            </div>
+                            <span className="text-[14px] font-black text-neutral-900 uppercase tracking-wider font-gothic">교육적 통찰 (Educational Insight)</span>
                           </div>
-                          <ul className="text-[12px] text-neutral-500 space-y-2 pl-5 leading-relaxed">
+                          <ul className="text-[13px] text-neutral-500 space-y-2.5 pl-9 leading-relaxed">
                             <li>• <b>인성지도사, 미술심리상담사, 독서성품지도사</b> 자격증 보유</li>
-                            <li>• 예술 활동 내면의 심미적 경험을 인문학적 성품과 자기 주도적 창의성으로 연결하는 통합 커리큘럼 설계</li>
+                            <li>• 예술 활동 내면의 심미적 경험을 인문학적 성품과 자기 주도적 창의성으로 연결하는 <b>통합 커리큘럼 설계</b></li>
                           </ul>
                         </div>
 
+                        {/* 4. Global Research */}
                         <div className="space-y-4">
-                          <div className="flex items-center gap-3">
-                            <div className="w-2 h-2 rounded-full bg-blue-600"></div>
-                            <span className="text-[13px] font-black text-neutral-900 uppercase tracking-wider font-gothic">글로벌 학술 연구 (Global Research)</span>
+                          <div className="flex items-center gap-3 mb-2">
+                            <div className="w-6 h-6 rounded-lg bg-blue-50 flex items-center justify-center">
+                              <div className="w-1.5 h-1.5 rounded-full bg-blue-600"></div>
+                            </div>
+                            <span className="text-[14px] font-black text-neutral-900 uppercase tracking-wider font-gothic">글로벌 학술 연구 (Global Research)</span>
                           </div>
-                          <ul className="text-[12px] text-neutral-500 space-y-2 pl-5 leading-relaxed">
+                          <ul className="text-[13px] text-neutral-500 space-y-2.5 pl-9 leading-relaxed">
                             <li>• <b>Nordoff-Robbins Music Therapy Program</b>, Clive Robbins 워크숍 수료</li>
                             <li>• Music Therapy 양적 연구방법(<b>SPSS 데이터 분석</b>) 전문 과정 수료</li>
                             <li>• 예술교육 효과성의 데이터 기반 분석적 접근</li>
