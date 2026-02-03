@@ -216,25 +216,45 @@ const About: React.FC = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="relative mb-24 max-w-6xl mx-auto"
         >
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center text-left">
-            <div className="relative overflow-hidden rounded-[2rem] md:rounded-[3rem] shadow-2xl border border-white aspect-[5/4] md:aspect-square lg:aspect-[4/3]">
-              <motion.img
-                animate={{
-                  scale: [1, 1.1, 1],
-                  x: [0, -10, 0],
-                  y: [0, 5, 0],
-                }}
-                transition={{
-                  duration: 20,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-                src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop"
-                alt="Healing Art Studio"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none" />
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-start text-left">
+            <div className="space-y-8">
+              <div className="relative overflow-hidden rounded-[2rem] md:rounded-[3rem] shadow-2xl border border-white aspect-[5/4] md:aspect-square lg:aspect-[4/3]">
+                <motion.img
+                  animate={{
+                    scale: [1, 1.1, 1],
+                    x: [0, -10, 0],
+                    y: [0, 5, 0],
+                  }}
+                  transition={{
+                    duration: 20,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop"
+                  alt="Healing Art Studio"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none" />
+              </div>
+
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={() => setShowHistory(!showHistory)}
+                className="w-full flex items-center justify-between px-8 py-5 rounded-full bg-neutral-900 text-white hover:bg-blue-600 transition-all shadow-xl group"
+              >
+                <span className="text-[11px] font-black tracking-[0.2em] uppercase">힐링예술터 주요 활동 실적 (연혁)</span>
+                <motion.div
+                  animate={{ rotate: showHistory ? 180 : 0 }}
+                  className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center"
+                >
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </motion.div>
+              </motion.button>
             </div>
+
             <div className="space-y-8 py-4">
               <div className="space-y-2">
                 <h5 className="text-[10px] font-black text-blue-600 uppercase tracking-[0.4em] mb-4 font-gothic">Perspective</h5>
@@ -255,25 +275,6 @@ const About: React.FC = () => {
                 <StatItem label="누적인원" value="2만명" />
                 <StatItem label="만족도" value="97%" />
               </motion.div>
-
-              <div className="pt-6">
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  onClick={() => setShowHistory(!showHistory)}
-                  className="w-full flex items-center justify-between px-8 py-5 rounded-full bg-neutral-900 text-white hover:bg-blue-600 transition-all shadow-xl group"
-                >
-                  <span className="text-[11px] font-black tracking-[0.2em] uppercase">힐링예술터 주요 활동 실적 (연혁)</span>
-                  <motion.div
-                    animate={{ rotate: showHistory ? 180 : 0 }}
-                    className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center"
-                  >
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </motion.div>
-                </motion.button>
-              </div>
             </div>
           </div>
         </motion.div>
