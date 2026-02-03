@@ -243,7 +243,7 @@ const About: React.FC = () => {
                 onClick={() => setShowHistory(!showHistory)}
                 className="w-full flex items-center justify-between px-8 py-5 rounded-full bg-neutral-900 text-white hover:bg-blue-600 transition-all shadow-xl group"
               >
-                <span className="text-[11px] font-black tracking-[0.2em] uppercase">힐링예술터 주요 활동 실적 (연혁)</span>
+                <span className="text-[11px] font-black tracking-[0.05em] uppercase">주요 활동 및 프로젝트 실적 (클릭하여 상세 내역 보기)</span>
                 <motion.div
                   animate={{ rotate: showHistory ? 180 : 0 }}
                   className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center"
