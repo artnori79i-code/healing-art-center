@@ -217,7 +217,7 @@ const About: React.FC = () => {
           className="relative mb-24 max-w-6xl mx-auto"
         >
           <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-start text-left">
-            <div className="space-y-8">
+            <div className="space-y-8 md:pt-24">
               <div className="relative overflow-hidden rounded-[2rem] md:rounded-[3rem] shadow-2xl border border-white aspect-[5/4] md:aspect-square lg:aspect-[4/3]">
                 <motion.img
                   animate={{
