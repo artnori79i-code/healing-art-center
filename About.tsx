@@ -210,20 +210,19 @@ const About: React.FC = () => {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.95, filter: "blur(10px)" }}
+          initial={{ opacity: 0, scale: 0.98, filter: "blur(10px)" }}
           whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
           transition={{ duration: 1.2, ease: "easeOut" }}
           viewport={{ once: true, margin: "-100px" }}
-          className="relative mb-24 max-w-4xl mx-auto"
+          className="relative mb-24 max-w-6xl mx-auto"
         >
-          <div className="grid md:grid-cols-2 gap-8 items-center text-left">
-            <div className="relative overflow-hidden rounded-[1.5rem] md:rounded-[2.5rem] shadow-2xl border border-white aspect-[16/10]">
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center text-left">
+            <div className="relative overflow-hidden rounded-[2rem] md:rounded-[3rem] shadow-2xl border border-white aspect-[5/4] md:aspect-square lg:aspect-[4/3]">
               <motion.img
                 animate={{
-                  scale: [1, 1.15, 1],
-                  x: [0, -20, 0],
-                  y: [0, 10, 0],
-                  filter: ["brightness(1) contrast(1)", "brightness(1.1) contrast(1.05)", "brightness(1) contrast(1)"]
+                  scale: [1, 1.1, 1],
+                  x: [0, -10, 0],
+                  y: [0, 5, 0],
                 }}
                 transition={{
                   duration: 20,
@@ -232,15 +231,19 @@ const About: React.FC = () => {
                 }}
                 src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop"
                 alt="Healing Art Studio"
-                className="w-full h-full object-cover scale-110"
+                className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none" />
             </div>
-            <div className="space-y-6 px-2">
-              <h3 className="text-lg md:text-2xl font-extrabold text-neutral-900 tracking-tight">Healing Art Perspective</h3>
-              <p className="text-neutral-600 text-[15px] md:text-[17px] leading-[2.4] font-medium max-w-xl md:max-w-none text-left">
-                <span className="font-extrabold text-neutral-900">2011년</span> 첫걸음을 뗀 이후, <span className="font-extrabold text-neutral-900">전국 200여 개 공공기관</span>과 <span className="font-extrabold text-neutral-900">국방부 전 군(육·해·공·해병대)</span>의 현장에서 고유한 예술적 가치를 실현해 왔습니다. <br />
-                <span className="font-extrabold text-neutral-900">15년</span>이라는 시간 동안 마주한 <span className="font-extrabold text-neutral-900">문화예술교육</span>은 단순한 기술 전수를 넘어, <span className="font-extrabold text-neutral-900">개인의 감각</span>을 깨우고 <span className="font-extrabold text-neutral-900">공동체의 결속</span>을 돕는 <span className="font-extrabold text-neutral-900">'삶의 현장'</span> 그 자체였습니다. <br />
+            <div className="space-y-8 py-4">
+              <div className="space-y-2">
+                <h5 className="text-[10px] font-black text-blue-600 uppercase tracking-[0.4em] mb-4 font-gothic">Perspective</h5>
+                <h3 className="text-2xl md:text-4xl font-black text-neutral-900 tracking-tighter leading-tight font-gothic">Healing Art <br /> Perspective</h3>
+              </div>
+
+              <p className="text-neutral-600 text-[15px] md:text-[18px] leading-[1.8] font-medium max-w-xl md:max-w-none text-left">
+                <span className="font-extrabold text-neutral-900">2011년</span> 첫걸음을 뗀 이후, <span className="font-extrabold text-neutral-900">전국 200여 개 공공기관</span>과 <span className="font-extrabold text-neutral-900">국방부 전 군(육·해·공·해병대)</span>의 현장에서 고유한 예술적 가치를 실현해 왔습니다. <br /><br />
+                <span className="font-extrabold text-neutral-900">15년</span>이라는 시간 동안 마주한 <span className="font-extrabold text-neutral-900">문화예술교육</span>은 단순한 기술 전수를 넘어, <span className="font-extrabold text-neutral-900">개인의 감각</span>을 깨우고 <span className="font-extrabold text-neutral-900">공동체의 결속</span>을 돕는 <span className="font-extrabold text-neutral-900">'삶의 현장'</span> 그 자체였습니다. <br /><br />
                 평범한 일상을 미학으로 재해석하는 고품격 프로그램을 통해, 우리 곁에 스며든 예술이 더 나은 세상을 향한 <span className="font-extrabold text-neutral-900">창의적 솔루션</span>이 될 수 있도록 <span className="font-extrabold text-neutral-900">신뢰와 열정</span>으로 함께하겠습니다.
               </p>
 
