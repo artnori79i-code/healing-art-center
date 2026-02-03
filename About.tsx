@@ -282,7 +282,7 @@ const About: React.FC = () => {
         <motion.div
           initial={false}
           animate={{ height: showHistory ? "auto" : 0, opacity: showHistory ? 1 : 0 }}
-          className="overflow-hidden mb-24"
+          className="overflow-hidden mb-12"
         >
           <div className="grid md:grid-cols-2 gap-6 pt-4">
             <HistoryCard
@@ -332,7 +332,7 @@ const About: React.FC = () => {
           </div>
         </motion.div>
 
-        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="mb-24 overflow-x-auto pb-4 scrollbar-hide">
+        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="mb-12 overflow-x-auto pb-4 scrollbar-hide">
           <div className="min-w-[700px] md:min-w-[900px] relative px-4 mx-auto">
             <div className="absolute top-[40px] md:top-[48px] left-0 w-full h-[1px] bg-neutral-100" />
             <div className="flex justify-between relative z-10">
