@@ -238,11 +238,10 @@ const About: React.FC = () => {
             </div>
             <div className="space-y-6 px-2">
               <h3 className="text-lg md:text-2xl font-extrabold text-neutral-900 tracking-tight">Healing Art Perspective</h3>
-              <p className="text-neutral-500 text-[13px] md:text-base leading-[2.2] font-medium max-w-xl md:max-w-none text-left">
-                2011년 설립 이후, 전국 200여 주요 기관과 국방부 전 군을 무대로 고유한 예술적 가치를 실현해 왔습니다.<br />
-                15년의 몰입한 현장 전문성은 공동체의 결속을 다짐과 함께 개인의 감각을 깨우는 예술이 되었습니다!<br />
-                평범한 일상을 예술적 미학으로 재해석하는 고품격 문화예술교육 프로그램은 삶의 본질을 향한 깊은 통찰과 울림을 제공드리기 위해 기획됩니다!<br />
-                우리속에 스며든 예술을 통해 더 나은 세상을 향한 창의적 솔루션을 설계하며, 참여자들의 뜨거운 신뢰와 열정 속에 지속적인 성장을 이뤘습니다.
+              <p className="text-neutral-600 text-[15px] md:text-[17px] leading-[2.4] font-medium max-w-xl md:max-w-none text-left">
+                <span className="font-extrabold text-neutral-900">2011년</span> 첫걸음을 뗀 이후, <span className="font-extrabold text-neutral-900">전국 200여 개 공공기관</span>과 <span className="font-extrabold text-neutral-900">국방부 전 군(육·해·공·해병대)</span>의 현장에서 고유한 예술적 가치를 실현해 왔습니다. <br />
+                <span className="font-extrabold text-neutral-900">15년</span>이라는 시간 동안 마주한 <span className="font-extrabold text-neutral-900">문화예술교육</span>은 단순한 기술 전수를 넘어, <span className="font-extrabold text-neutral-900">개인의 감각</span>을 깨우고 <span className="font-extrabold text-neutral-900">공동체의 결속</span>을 돕는 <span className="font-extrabold text-neutral-900">'삶의 현장'</span> 그 자체였습니다. <br />
+                평범한 일상을 미학으로 재해석하는 고품격 프로그램을 통해, 우리 곁에 스며든 예술이 더 나은 세상을 향한 <span className="font-extrabold text-neutral-900">창의적 솔루션</span>이 될 수 있도록 <span className="font-extrabold text-neutral-900">신뢰와 열정</span>으로 함께하겠습니다.
               </p>
 
               <motion.div
