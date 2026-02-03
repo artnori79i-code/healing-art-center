@@ -240,7 +240,7 @@ const About: React.FC = () => {
               <h3 className="text-lg md:text-2xl font-extrabold text-neutral-900 tracking-tight">Healing Art Perspective</h3>
               <p className="text-neutral-500 text-[13px] md:text-base leading-[2.2] font-medium max-w-xl md:max-w-none text-left">
                 2011년 설립 이후, 전국 200여 주요 기관과 국방부 전 군을 무대로 고유한 예술적 가치를 실현해 왔습니다.<br />
-                15년의 집요한 현장 전문성은 공동체의 결속을 다짐과 함께 개인의 감각을 깨우는 예술이 되었습니다!<br />
+                15년의 몰입한 현장 전문성은 공동체의 결속을 다짐과 함께 개인의 감각을 깨우는 예술이 되었습니다!<br />
                 평범한 일상을 예술적 미학으로 재해석하는 고품격 문화예술교육 프로그램은 삶의 본질을 향한 깊은 통찰과 울림을 제공드리기 위해 기획됩니다!<br />
                 우리속에 스며든 예술을 통해 더 나은 세상을 향한 창의적 솔루션을 설계하며, 참여자들의 뜨거운 신뢰와 열정 속에 지속적인 성장을 이뤘습니다.
               </p>
@@ -500,7 +500,7 @@ const About: React.FC = () => {
                         {[
                           { title: "감각의 확장과 융합", desc: "음악의 리듬과 선율이 신체의 부드러운 움직임이 되고, 다시 시각적인 형상화와 인문학적 성찰로 이어지는 '통합예술교육'을 연구합니다. 이러한 고유의 교수법을 현장에 조심스럽게 적용하며 예술의 경계가 허물어지는 지점을 발견해 왔습니다." },
                           { title: "일상의 예술화", desc: "예술은 특별한 재능을 가진 이들만의 영역이 아니라고 믿습니다. 평범한 개인의 일상을 미학적으로 재해석하고 소중하게 기록하는 따스한 교육적 도구로 활용될 수 있도록, 예술의 문턱을 낮추고 그 깊이를 채우는 데 집중합니다." },
-                          { title: "현장의 집요함", desc: "15년 동안 현장에서 마주한 수많은 삶의 결들은 저에게 큰 가르침을 주었습니다. 예술이 단순히 지식을 전달하는 것을 넘어, 사람의 마음을 보듬고 우리 공동체를 회복시키는 '문화적 처방'이 될 수 있음을 매 순간 가슴으로 체득해 왔습니다." }
+                          { title: "현장의 몰입", desc: "15년 동안 현장에서 마주한 수많은 삶의 결들은 저에게 큰 가르침을 주었습니다. 예술이 단순히 지식을 전달하는 것을 넘어, 사람의 마음을 보듬고 우리 공동체를 회복시키는 '문화적 처방'이 될 수 있음을 매 순간 가슴으로 체득해 왔습니다." }
                         ].map((item, i) => (
                           <div key={i} className="space-y-2 border-l-2 border-neutral-100/50 pl-6 hover:border-blue-200 transition-colors">
                             <span className="text-[15px] font-black text-neutral-900 block font-gothic tracking-wider">{item.title}</span>
