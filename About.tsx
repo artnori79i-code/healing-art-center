@@ -181,6 +181,74 @@ const About: React.FC = () => {
     { year: "2023", label: "확장" }, { year: "", label: "융합" }
   ];
 
+  const historyContent = (
+    <motion.div
+      initial={false}
+      animate={{ height: showHistory ? "auto" : 0, opacity: showHistory ? 1 : 0 }}
+      className="overflow-hidden mb-12"
+    >
+      <div className="grid md:grid-cols-2 gap-6 pt-4">
+        <HistoryCard
+          delay={0.1}
+          title="1. 문화예술교육 기획 및 총괄 운영 실적 (전국 단위)"
+          items={[
+            <>범국가적 문화예술지원사업 수행: <b>문화체육관광부</b> 및 <b>국방부</b> 주관 <b>'군부대 문화예술교육 지원사업'</b> 음악 분야 <b>[힐링예술터]</b> 총괄 기획 및 운영</>,
+            <><b>육·해·공군 및 해병대</b> 맞춤형 교육: 인천, 강화, 화성, 안산, 강원도 철원, 백령도, 연평도 등 <b>전국 전방 부대 및 격오지</b> 대상 수십여 개 <b>군부대 문화예술교육/소개교육/군장병 공연 교육</b> 커리큘럼 설계</>,
+            <>특수 공공기관 상설 교육: <b>용산경찰서 [2013-2016]</b>의경대상 밴드 예술 교육 기획 및 <b>경기도여성비전센터 '문화예술교육 통합 리더십'</b>교육 기획</>,
+            <><b>서울문화재단</b> 전략 프로젝트: <b>성북예술창작센터 [이성경-힐링예술터] 4년간</b> 입주작가로서 '상상음악공장', '동물의 왕국 뮤지컬', '새소망 노래 녹음방' 등 <b>17개 혁신 교육 모델</b> 개발</>,
+            <><b>서울시청 평생교육센터</b>, <b>서울시 드림스타트 센터 '예술로 놀자!'</b> 프로그램 기획 및 개발 참여</>
+          ]}
+        />
+        <HistoryCard
+          delay={0.2}
+          title="2. 장르 통합형 창의 융합 예술 실적"
+          items={[
+            <><b>문화체육관광부</b> 산하 <b>한국문화예술교육진흥원(ARTE) '오감충족'</b> 전통놀이음악극 개발 및 공연 기획/운영/연구</>,
+            <><b>100여개 초·중·고교</b> 문화예술교육 기획 및 교육 협약, 전교생 대상 장기 프로젝트: <b>동작초등학교</b>(전교생 대상 창의예술체험), <b>서울시 교육청</b> 등 수도권 수십여 개교와 협력하여 학기별 정규 프로그램 운영</>,
+            <><b>광역 지자체</b> 교육지원사업: <b>서울시</b>(동작구, 은평구, 성북구 등), <b>경기도</b>(김포, 시흥 등) 관내 학교 및 센터 연계 예술 교육 서비스 제공</>,
+            <>인문·문학 융합 교육: <b>어린이도서연구회</b> 협력 '예술동화탐험' 시리즈를 통한 독서 창작과 시각/음악 활동의 복합 설계</>,
+            <>미디어 기반 통합 교육: <b>세종시</b> 협력 <b>스마트폰·인터넷 중독 예방</b>을 위한 '밴드 융합 소리놀이' 및 세종시 청소년 <b>예술 체험 캠프</b> 운영</>
+          ]}
+        />
+        <HistoryCard
+          delay={0.3}
+          title="3. 시니어 특화 및 생애주기별 정서지원 실적"
+          items={[
+            <><b>고위험군 시니어 전문 교육</b>: <b>고양시 대화노인종합복지관</b> 우울증 및 자살 고위험군(F진단) 대상 예술 정서지원</>,
+            <>수도권 <b>주요 노인종합복지관</b> 거점 활동: <b>동작, 중계, 서초, 분당</b> 등 주요 노인종합복지관 대상 상설 문화예술 교육 세션 진행</>,
+            <>특수 케어 및 데이케어: <b>성심치매노인기관, 역촌데이케어센터, 한우리정보문화센터</b> 등 돌봄 기반 예술 활동 지원</>,
+            <>가족 및 보호자 지원: <b>서초구청 '치매 부양 가족을 위한 예술 정서요법'</b> 등 <b>보호자 대상 힐링 프로그램</b> 특화</>,
+            <><b>중랑구청</b> 파견 <b>원광종합사회복지관</b> 노인돌봄 <b>문화예술교육 프로그램 기획 및 설계 연구</b></>
+          ]}
+        />
+        <HistoryCard
+          delay={0.4}
+          title="4. 기업 사회공헌(CSR) 및 의료기관 문화예술교육+예술체험 실적"
+          items={[
+            <><b>글로벌 기업</b> 협력 실적: <b>사노피 아벤티스</b>('싱싱엔돌핀', '함께해송'), <b>GS칼텍스</b>, <b>대웅제약</b> 등 기업 연계 예술 솔루션 제공</>,
+            <><b>주요 대학병원 환자 정서지원</b>: <b>한강성심(신경정신), 여의도성모, 한양대, 고려대병원 암센터</b> 등 의료 현장 내 <b>문화예술교육 +예술체험</b> 접목 교육 적용</>,
+            <><b>2014 사노피 아벤티스</b> 제약회사 후원사업 운영 <b>&lt;'암생존자/ 암환우 대상': '함께해송 프로그램' 기획자 및 주강사&gt;</b></>,
+            <><b>(사)세계예술교육협회 &lt;세계예술체험축제: 장애-비장애형제를 위한 왁자지껄 예술체험축제, 아싸라비아!&gt; 10년 이상 매해 꾸준히</b> 참여 함</>,
+            <><b>사회복지재단</b> 협력: <b>삼성꿈장학재단, 초록우산 어린이재단, 하이패밀리</b> 등과 연계한 취약계층 예술 복지 실현</>
+          ]}
+        />
+      </div>
+    </motion.div>
+  );
+
+  const timelineContent = (
+    <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="mb-12 overflow-x-auto pb-4 scrollbar-hide">
+      <div className="min-w-[700px] md:min-w-[900px] relative px-4 mx-auto">
+        <div className="absolute top-[40px] md:top-[48px] left-0 w-full h-[1px] bg-neutral-100" />
+        <div className="flex justify-between relative z-10">
+          {timelineData.map((item, i) => (
+            <TimelineItem key={i} index={i} {...item} />
+          ))}
+        </div>
+      </div>
+    </motion.div>
+  );
+
   return (
     <div className="bg-white py-16 md:py-24 overflow-hidden border-t border-neutral-50">
       <div className="container mx-auto px-6 max-w-6xl">
@@ -241,18 +309,26 @@ const About: React.FC = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => setShowHistory(!showHistory)}
-                className="w-full flex items-center justify-between px-8 py-5 rounded-full bg-neutral-900 text-white hover:bg-blue-600 transition-all shadow-xl group"
+                className="w-full flex items-center justify-between px-6 md:px-8 py-5 rounded-full bg-neutral-900 text-white hover:bg-blue-600 transition-all shadow-xl group"
               >
-                <span className="text-[11px] font-black tracking-[0.05em] uppercase">주요 활동 및 프로젝트 실적 (클릭하여 상세 내역 보기)</span>
+                <span className="text-[9px] min-[380px]:text-[10px] md:text-[11px] font-black tracking-tight md:tracking-[0.05em] uppercase whitespace-nowrap overflow-hidden text-ellipsis">
+                  주요 활동 및 프로젝트 실적 (클릭하여 상세 보기)
+                </span>
                 <motion.div
                   animate={{ rotate: showHistory ? 180 : 0 }}
-                  className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center"
+                  className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0"
                 >
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
                   </svg>
                 </motion.div>
               </motion.button>
+
+              {/* Mobile-only History Content (Appears directly below button) */}
+              <div className="md:hidden">
+                {historyContent}
+                {timelineContent}
+              </div>
             </div>
 
             <div className="space-y-8 py-4">
@@ -279,69 +355,11 @@ const About: React.FC = () => {
           </div>
         </motion.div>
 
-        <motion.div
-          initial={false}
-          animate={{ height: showHistory ? "auto" : 0, opacity: showHistory ? 1 : 0 }}
-          className="overflow-hidden mb-12"
-        >
-          <div className="grid md:grid-cols-2 gap-6 pt-4">
-            <HistoryCard
-              delay={0.1}
-              title="1. 문화예술교육 기획 및 총괄 운영 실적 (전국 단위)"
-              items={[
-                <>범국가적 문화예술지원사업 수행: <b>문화체육관광부</b> 및 <b>국방부</b> 주관 <b>'군부대 문화예술교육 지원사업'</b> 음악 분야 <b>[힐링예술터]</b> 총괄 기획 및 운영</>,
-                <><b>육·해·공군 및 해병대</b> 맞춤형 교육: 인천, 강화, 화성, 안산, 강원도 철원, 백령도, 연평도 등 <b>전국 전방 부대 및 격오지</b> 대상 수십여 개 <b>군부대 문화예술교육/소개교육/군장병 공연 교육</b> 커리큘럼 설계</>,
-                <>특수 공공기관 상설 교육: <b>용산경찰서 [2013-2016]</b>의경대상 밴드 예술 교육 기획 및 <b>경기도여성비전센터 '문화예술교육 통합 리더십'</b>교육 기획</>,
-                <><b>서울문화재단</b> 전략 프로젝트: <b>성북예술창작센터 [이성경-힐링예술터] 4년간</b> 입주작가로서 '상상음악공장', '동물의 왕국 뮤지컬', '새소망 노래 녹음방' 등 <b>17개 혁신 교육 모델</b> 개발</>,
-                <><b>서울시청 평생교육센터</b>, <b>서울시 드림스타트 센터 '예술로 놀자!'</b> 프로그램 기획 및 개발 참여</>
-              ]}
-            />
-            <HistoryCard
-              delay={0.2}
-              title="2. 장르 통합형 창의 융합 예술 실적"
-              items={[
-                <><b>문화체육관광부</b> 산하 <b>한국문화예술교육진흥원(ARTE) '오감충족'</b> 전통놀이음악극 개발 및 공연 기획/운영/연구</>,
-                <><b>100여개 초·중·고교</b> 문화예술교육 기획 및 교육 협약, 전교생 대상 장기 프로젝트: <b>동작초등학교</b>(전교생 대상 창의예술체험), <b>서울시 교육청</b> 등 수도권 수십여 개교와 협력하여 학기별 정규 프로그램 운영</>,
-                <><b>광역 지자체</b> 교육지원사업: <b>서울시</b>(동작구, 은평구, 성북구 등), <b>경기도</b>(김포, 시흥 등) 관내 학교 및 센터 연계 예술 교육 서비스 제공</>,
-                <>인문·문학 융합 교육: <b>어린이도서연구회</b> 협력 '예술동화탐험' 시리즈를 통한 독서 창작과 시각/음악 활동의 복합 설계</>,
-                <>미디어 기반 통합 교육: <b>세종시</b> 협력 <b>스마트폰·인터넷 중독 예방</b>을 위한 '밴드 융합 소리놀이' 및 세종시 청소년 <b>예술 체험 캠프</b> 운영</>
-              ]}
-            />
-            <HistoryCard
-              delay={0.3}
-              title="3. 시니어 특화 및 생애주기별 정서지원 실적"
-              items={[
-                <><b>고위험군 시니어 전문 교육</b>: <b>고양시 대화노인종합복지관</b> 우울증 및 자살 고위험군(F진단) 대상 예술 정서지원</>,
-                <>수도권 <b>주요 노인종합복지관</b> 거점 활동: <b>동작, 중계, 서초, 분당</b> 등 주요 노인종합복지관 대상 상설 문화예술 교육 세션 진행</>,
-                <>특수 케어 및 데이케어: <b>성심치매노인기관, 역촌데이케어센터, 한우리정보문화센터</b> 등 돌봄 기반 예술 활동 지원</>,
-                <>가족 및 보호자 지원: <b>서초구청 '치매 부양 가족을 위한 예술 정서요법'</b> 등 <b>보호자 대상 힐링 프로그램</b> 특화</>,
-                <><b>중랑구청</b> 파견 <b>원광종합사회복지관</b> 노인돌봄 <b>문화예술교육 프로그램 기획 및 설계 연구</b></>
-              ]}
-            />
-            <HistoryCard
-              delay={0.4}
-              title="4. 기업 사회공헌(CSR) 및 의료기관 문화예술교육+예술체험 실적"
-              items={[
-                <><b>글로벌 기업</b> 협력 실적: <b>사노피 아벤티스</b>('싱싱엔돌핀', '함께해송'), <b>GS칼텍스</b>, <b>대웅제약</b> 등 기업 연계 예술 솔루션 제공</>,
-                <><b>주요 대학병원 환자 정서지원</b>: <b>한강성심(신경정신), 여의도성모, 한양대, 고려대병원 암센터</b> 등 의료 현장 내 <b>문화예술교육 +예술체험</b> 접목 교육 적용</>,
-                <><b>2014 사노피 아벤티스</b> 제약회사 후원사업 운영 <b>&lt;'암생존자/ 암환우 대상': '함께해송 프로그램' 기획자 및 주강사&gt;</b></>,
-                <><b>(사)세계예술교육협회 &lt;세계예술체험축제: 장애-비장애형제를 위한 왁자지껄 예술체험축제, 아싸라비아!&gt; 10년 이상 매해 꾸준히</b> 참여 함</>,
-                <><b>사회복지재단</b> 협력: <b>삼성꿈장학재단, 초록우산 어린이재단, 하이패밀리</b> 등과 연계한 취약계층 예술 복지 실현</>
-              ]}
-            />
-          </div>
-        </motion.div>
-
-        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="mb-12 overflow-x-auto pb-4 scrollbar-hide">
-          <div className="min-w-[700px] md:min-w-[900px] relative px-4 mx-auto">
-            <div className="absolute top-[40px] md:top-[48px] left-0 w-full h-[1px] bg-neutral-100" />
-            <div className="flex justify-between relative z-10">
-              {timelineData.map((item, i) => (
-                <TimelineItem key={i} index={i} {...item} />
-              ))}
-            </div>
-          </div>
-        </motion.div>
+        {/* Desktop-only History Content (Appears below the entire row) */}
+        <div className="hidden md:block">
+          {historyContent}
+          {timelineContent}
+        </div>
 
         <div className="flex justify-center w-full mb-16">
           <motion.div
