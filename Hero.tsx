@@ -134,9 +134,9 @@ const Hero: React.FC = () => {
         {phase === 'spread' ? (
           <>
             {/* Mobile simplified spread */}
-            <div className="md:hidden flex flex-wrap justify-center gap-2 p-4 w-full h-full overflow-y-auto">
+            <div className="md:hidden flex flex-wrap justify-center items-center gap-3 p-6 w-full h-auto min-h-[220px]">
               {GRID_ITEMS.slice(0, 8).map((item) => (
-                <div key={item.id} className="w-[80px] aspect-square rounded-xl overflow-hidden shadow-md border-2 border-white flex-shrink-0">
+                <div key={item.id} className="w-[75px] aspect-square rounded-xl overflow-hidden shadow-md border-2 border-white shrink-0">
                   <img src={item.url} alt="" className="w-full h-full object-cover" />
                 </div>
               ))}

@@ -250,14 +250,14 @@ const About: React.FC = () => {
   );
 
   return (
-    <div className="bg-white py-16 md:py-24 overflow-hidden border-t border-neutral-50">
-      <div className="container mx-auto px-6 max-w-6xl">
-        <div className="flex flex-col md:flex-row justify-between items-start mb-16 gap-6">
+    <div className="bg-white py-16 md:py-24 overflow-x-hidden border-t border-neutral-50">
+      <div className="w-full max-w-6xl mx-auto px-5 md:px-6">
+        <div className="flex flex-col md:flex-row justify-between items-start mb-12 md:mb-16 gap-6">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-left"
+            className="text-left w-full"
           >
             <div className="flex items-center justify-start gap-3 mb-3">
               <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center border border-blue-100 shadow-sm">
@@ -282,10 +282,10 @@ const About: React.FC = () => {
           whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
           transition={{ duration: 1.2, ease: "easeOut" }}
           viewport={{ once: true, margin: "-100px" }}
-          className="relative mb-24 max-w-6xl mx-auto"
+          className="relative mb-24 max-w-6xl mx-auto w-full"
         >
-          <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-start text-left">
-            <div className="space-y-6 md:space-y-8 md:pt-16 w-full">
+          <div className="flex flex-col md:grid md:grid-cols-2 gap-10 lg:gap-16 items-start text-left w-full">
+            <div className="space-y-6 md:space-y-8 md:pt-16 w-full max-w-full">
               <div className="relative overflow-hidden rounded-[2rem] md:rounded-[3rem] shadow-2xl border border-white aspect-square md:aspect-square lg:aspect-[4/3] w-[90%] max-w-[320px] mx-auto md:w-full md:max-w-none">
                 <motion.img
                   animate={{
@@ -311,7 +311,7 @@ const About: React.FC = () => {
                 onClick={() => setShowHistory(!showHistory)}
                 className="w-full flex items-center justify-between px-6 md:px-8 py-5 rounded-full bg-neutral-900 text-white hover:bg-blue-600 transition-all shadow-xl group"
               >
-                <span className="text-[10px] md:text-[12px] font-black tracking-tight leading-tight md:tracking-[0.02em] uppercase whitespace-normal text-left flex-grow break-keep">
+                <span className="text-[10px] md:text-[12px] font-black tracking-tight leading-tight md:tracking-[0.02em] uppercase whitespace-normal text-left flex-grow break-all">
                   주요 활동 및 프로젝트 실적 <span className="sm:inline">(클릭하여 상세 보기)</span>
                 </span>
                 <motion.div
@@ -337,7 +337,7 @@ const About: React.FC = () => {
                 <h3 className="text-xl md:text-3xl lg:text-4xl font-black text-neutral-900 tracking-tighter leading-tight font-gothic">Healing Art Perspective</h3>
               </div>
 
-              <p className="text-neutral-500 text-[15px] md:text-[18px] leading-[2.2] font-medium w-full md:max-w-none text-left break-words overflow-wrap-anywhere">
+              <p className="text-neutral-500 text-[15px] md:text-[18px] leading-[2.2] font-medium w-full md:max-w-none text-left break-words">
                 <span className="font-extrabold text-neutral-900">2011년</span> 첫걸음을 뗀 이후, <span className="font-extrabold text-neutral-900">전국 200여 개 공공기관</span>과 <span className="font-extrabold text-neutral-900">국방부 전 군(육·해·공·해병대)</span>의 현장에서 고유한 예술적 가치를 실현해 왔습니다. <span className="font-extrabold text-neutral-900">15년</span>이라는 시간 동안 마주한 <span className="font-extrabold text-neutral-900">문화예술교육</span>은 단순한 기술 전수를 넘어, <span className="font-extrabold text-neutral-900">개인의 감각</span>을 깨우고 <span className="font-extrabold text-neutral-900">공동체의 결속</span>을 돕는 <span className="font-extrabold text-neutral-900">'삶의 현장'</span> 그 자체였으며, 평범한 일상을 미학으로 재해석하는 고품격 프로그램을 통해 우리 곁에 스며든 예술이 더 나은 세상을 향한 <span className="font-extrabold text-neutral-900">창의적 솔루션</span>이 될 수 있도록 <span className="font-extrabold text-neutral-900">신뢰와 열정</span>으로 함께하겠습니다.
               </p>
 
