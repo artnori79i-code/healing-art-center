@@ -309,7 +309,7 @@ const About: React.FC = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => setShowHistory(!showHistory)}
-                className="w-[90%] max-w-[320px] mx-auto flex items-center justify-between px-6 md:px-8 py-4 rounded-full bg-white text-neutral-900 border border-neutral-200 hover:border-blue-400 hover:text-blue-600 transition-all shadow-md group"
+                className="w-[90%] max-w-[320px] mx-auto md:w-full md:max-w-none flex items-center justify-between px-6 md:px-8 py-4 rounded-full bg-white text-neutral-900 border border-neutral-200 hover:border-blue-400 hover:text-blue-600 transition-all shadow-md group"
               >
                 <span className="text-[10px] md:text-[12px] font-black tracking-tight leading-tight md:tracking-[0.02em] uppercase whitespace-normal text-left flex-grow break-all">
                   주요 활동 및 프로젝트 실적 <span className="sm:inline">(클릭하여 상세 보기)</span>
