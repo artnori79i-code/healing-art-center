@@ -237,8 +237,8 @@ const About: React.FC = () => {
   );
 
   const timelineContent = (
-    <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="mb-12 w-full overflow-x-auto pb-4 scrollbar-hide">
-      <div className="min-w-[600px] md:min-w-[900px] relative px-4 mx-auto">
+    <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="mb-12 w-full overflow-x-auto pb-4 scrollbar-hide -mx-6 px-6">
+      <div className="min-w-[700px] md:min-w-[900px] relative">
         <div className="absolute top-[40px] md:top-[48px] left-0 w-full h-[1px] bg-neutral-100" />
         <div className="flex justify-between relative z-10">
           {timelineData.map((item, i) => (
@@ -284,9 +284,9 @@ const About: React.FC = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="relative mb-24 max-w-6xl mx-auto"
         >
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-start text-left">
-            <div className="space-y-8 md:pt-16">
-              <div className="relative overflow-hidden rounded-[2rem] md:rounded-[3rem] shadow-2xl border border-white aspect-[5/4] md:aspect-square lg:aspect-[4/3]">
+          <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-start text-left">
+            <div className="space-y-6 md:space-y-8 md:pt-16 w-full lg:w-auto">
+              <div className="relative overflow-hidden rounded-[2rem] md:rounded-[3rem] shadow-2xl border border-white aspect-square md:aspect-square lg:aspect-[4/3] w-[85%] mx-auto md:w-full">
                 <motion.img
                   animate={{
                     scale: [1, 1.1, 1],
@@ -311,14 +311,14 @@ const About: React.FC = () => {
                 onClick={() => setShowHistory(!showHistory)}
                 className="w-full flex items-center justify-between px-6 md:px-8 py-5 rounded-full bg-neutral-900 text-white hover:bg-blue-600 transition-all shadow-xl group"
               >
-                <span className="text-[9px] min-[380px]:text-[10px] md:text-[11px] font-black tracking-tight md:tracking-[0.05em] uppercase whitespace-nowrap overflow-hidden text-ellipsis">
-                  주요 활동 및 프로젝트 실적 (클릭하여 상세 보기)
+                <span className="text-[9px] min-[380px]:text-[10px] md:text-[12px] font-black tracking-tight leading-tight md:tracking-[0.02em] uppercase whitespace-normal text-left pr-2 flex-grow">
+                  주요 활동 및 프로젝트 실적 <span className="hidden min-[420px]:inline">(클릭하여 상세 보기)</span>
                 </span>
                 <motion.div
                   animate={{ rotate: showHistory ? 180 : 0 }}
-                  className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0"
+                  className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0"
                 >
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-3 h-3 md:w-4 md:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
                   </svg>
                 </motion.div>
@@ -371,10 +371,10 @@ const About: React.FC = () => {
           >
             <div className="grid md:grid-cols-[1.2fr_2fr] gap-10 md:gap-16 items-start">
               {/* Left Column: Photo & Name */}
-              <div className="flex flex-col items-center sticky top-24">
+              <div className="flex flex-col items-center md:sticky md:top-24">
                 <motion.div
                   style={{ rotate: profileRotate, y: profileY }}
-                  className="w-full aspect-[3.1/4] rounded-[2.5rem] overflow-hidden shadow-2xl border-white border-8 mb-8 group relative"
+                  className="w-[80%] md:w-full aspect-[3.1/4] rounded-[2.5rem] overflow-hidden shadow-2xl border-white border-8 mb-8 group relative mx-auto"
                 >
                   <motion.img
                     initial={{ scale: 1.2 }}
@@ -438,7 +438,7 @@ const About: React.FC = () => {
                 </div>
 
                 {/* 3. Three Button Row */}
-                <div className="pt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="pt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
                   <motion.a
                     href={PROF_URL}
                     target="_blank"

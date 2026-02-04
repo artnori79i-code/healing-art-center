@@ -96,7 +96,7 @@ const Hero: React.FC = () => {
 
       <motion.div
         style={{ y: titleY }}
-        className="relative z-20 text-center mb-16 mt-48 md:mt-56 w-full px-4"
+        className="relative z-20 text-center mb-12 md:mb-16 mt-32 md:mt-56 w-full px-4"
       >
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -110,9 +110,9 @@ const Hero: React.FC = () => {
           <motion.div
             animate={{ color: colorCycle }}
             transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
-            className="select-none mb-6"
+            className="select-none mb-4 md:mb-6"
           >
-            <h1 className="text-[7vw] md:text-[4.2vw] font-gothic font-black tracking-[0.15em] md:tracking-[0.45em] uppercase block leading-[1.1] md:leading-none drop-shadow-sm">
+            <h1 className="text-[10vw] md:text-[4.2vw] font-gothic font-black tracking-[0.1em] md:tracking-[0.45em] uppercase block leading-[1.0] md:leading-none drop-shadow-sm">
               <span className="block md:inline">HEALING </span>
               <span className="block md:inline">ART </span>
               <span className="block md:inline">CENTER</span>
@@ -138,9 +138,9 @@ const Hero: React.FC = () => {
                 key={item.id}
                 initial={{ x: 0, y: 0, scale: 0.5, opacity: 0, rotate: -20 }}
                 animate={{
-                  x: (i - GRID_ITEMS.length / 2) * 80,
+                  x: (i - GRID_ITEMS.length / 2) * (window.innerWidth < 768 ? 25 : 80),
                   y: [Math.sin(i * 1.5) * 40, (Math.sin(i * 1.5) * 40) + 10, Math.sin(i * 1.5) * 40],
-                  scale: 0.7,
+                  scale: (window.innerWidth < 768 ? 0.5 : 0.7),
                   opacity: 1,
                   rotate: [Math.random() * 6 - 3, (Math.random() * 6 - 3) + 2, Math.random() * 6 - 3]
                 }}
@@ -150,7 +150,7 @@ const Hero: React.FC = () => {
                   rotate: { duration: 5 + i * 0.5, repeat: Infinity, ease: "easeInOut" },
                   opacity: { duration: 0.5, delay: i * 0.05 }
                 }}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140px] md:w-[180px] aspect-square rounded-[1rem] md:rounded-[1.2rem] overflow-hidden shadow-xl border-2 md:border-4 border-white"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100px] md:w-[180px] aspect-square rounded-[1rem] md:rounded-[1.2rem] overflow-hidden shadow-xl border-2 md:border-4 border-white"
               >
                 <img src={item.url} alt="" className="w-full h-full object-cover" />
               </motion.div>
@@ -196,7 +196,7 @@ const Hero: React.FC = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 2, duration: 0.8 }}
-        className="flex flex-row gap-2 md:gap-4 mb-16 z-30"
+        className="flex flex-wrap justify-center gap-2 md:gap-4 mb-16 z-30 px-6"
       >
         {[
           { label: "YouTube", url: YOUTUBE_URL, color: "border border-red-500 text-red-600 hover:bg-red-50" },
@@ -209,7 +209,7 @@ const Hero: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05, y: -2 }}
-            className={`px-4 md:px-8 py-2 md:py-3 rounded-full text-[9px] md:text-[10px] font-black tracking-widest uppercase transition-all shadow-sm font-gothic ${btn.color}`}
+            className={`px-4 md:px-8 py-2.5 md:py-3 rounded-full text-[10px] md:text-[11px] font-black tracking-widest uppercase transition-all shadow-sm font-gothic ${btn.color}`}
           >
             {btn.label}
           </motion.a>
