@@ -132,6 +132,7 @@ const Hero: React.FC = () => {
 
       <div className="relative w-full h-[200px] md:h-[280px] flex items-center justify-center mb-12">
         {phase === 'spread' ? (
+          <>
             {/* Mobile simplified spread */}
             <div className="md:hidden flex flex-wrap justify-center gap-2 p-4 w-full h-full overflow-y-auto">
               {GRID_ITEMS.slice(0, 8).map((item) => (
@@ -140,7 +141,7 @@ const Hero: React.FC = () => {
                 </div>
               ))}
             </div>
-            
+
             {/* Desktop spread */}
             <div className="hidden md:block relative w-full h-full">
               {GRID_ITEMS.map((item, i) => (
@@ -171,6 +172,7 @@ const Hero: React.FC = () => {
                 </motion.div>
               ))}
             </div>
+          </>
         ) : (
           <motion.div
             initial={{ opacity: 0 }}
