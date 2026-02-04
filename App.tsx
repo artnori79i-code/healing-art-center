@@ -1,4 +1,4 @@
-// Path: App.tsx
+// Path: App.tsx (v1.0.1 - Mobile Layout Fix)
 import React, { useState } from 'react';
 import Header from './Header';
 import Hero from './Hero';

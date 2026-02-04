@@ -311,7 +311,7 @@ const About: React.FC = () => {
                 onClick={() => setShowHistory(!showHistory)}
                 className="w-full flex items-center justify-between px-6 md:px-8 py-5 rounded-full bg-neutral-900 text-white hover:bg-blue-600 transition-all shadow-xl group"
               >
-                <span className="text-[10px] md:text-[12px] font-black tracking-tight leading-tight md:tracking-[0.02em] uppercase whitespace-normal text-left flex-grow">
+                <span className="text-[10px] md:text-[12px] font-black tracking-tight leading-tight md:tracking-[0.02em] uppercase whitespace-normal text-left flex-grow break-keep">
                   주요 활동 및 프로젝트 실적 <span className="sm:inline">(클릭하여 상세 보기)</span>
                 </span>
                 <motion.div
@@ -337,7 +337,7 @@ const About: React.FC = () => {
                 <h3 className="text-xl md:text-3xl lg:text-4xl font-black text-neutral-900 tracking-tighter leading-tight font-gothic">Healing Art Perspective</h3>
               </div>
 
-              <p className="text-neutral-500 text-[15px] md:text-[18px] leading-[2.2] font-medium w-full md:max-w-none text-left">
+              <p className="text-neutral-500 text-[15px] md:text-[18px] leading-[2.2] font-medium w-full md:max-w-none text-left break-words overflow-wrap-anywhere">
                 <span className="font-extrabold text-neutral-900">2011년</span> 첫걸음을 뗀 이후, <span className="font-extrabold text-neutral-900">전국 200여 개 공공기관</span>과 <span className="font-extrabold text-neutral-900">국방부 전 군(육·해·공·해병대)</span>의 현장에서 고유한 예술적 가치를 실현해 왔습니다. <span className="font-extrabold text-neutral-900">15년</span>이라는 시간 동안 마주한 <span className="font-extrabold text-neutral-900">문화예술교육</span>은 단순한 기술 전수를 넘어, <span className="font-extrabold text-neutral-900">개인의 감각</span>을 깨우고 <span className="font-extrabold text-neutral-900">공동체의 결속</span>을 돕는 <span className="font-extrabold text-neutral-900">'삶의 현장'</span> 그 자체였으며, 평범한 일상을 미학으로 재해석하는 고품격 프로그램을 통해 우리 곁에 스며든 예술이 더 나은 세상을 향한 <span className="font-extrabold text-neutral-900">창의적 솔루션</span>이 될 수 있도록 <span className="font-extrabold text-neutral-900">신뢰와 열정</span>으로 함께하겠습니다.
               </p>
 

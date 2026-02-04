@@ -132,35 +132,45 @@ const Hero: React.FC = () => {
 
       <div className="relative w-full h-[200px] md:h-[280px] flex items-center justify-center mb-12">
         {phase === 'spread' ? (
-          <div className="relative w-full h-full">
-            {GRID_ITEMS.map((item, i) => (
-              <motion.div
-                key={item.id}
-                initial={{ x: 0, y: 0, scale: 0.5, opacity: 0, rotate: -20 }}
-                animate={{
-                  x: (i - GRID_ITEMS.length / 2) * 20,
-                  y: [Math.sin(i * 1.5) * 40, (Math.sin(i * 1.5) * 40) + 10, Math.sin(i * 1.5) * 40],
-                  scale: 0.5,
-                  opacity: 1,
-                  rotate: [Math.random() * 6 - 3, (Math.random() * 6 - 3) + 2, Math.random() * 6 - 3]
-                }}
-                whileInView={{
-                  x: (i - GRID_ITEMS.length / 2) * 80,
-                  scale: 0.7,
-                }}
-                viewport={{ margin: "100px" }}
-                transition={{
-                  x: { type: "spring", stiffness: 40, damping: 12, delay: i * 0.05 },
-                  y: { duration: 4 + i * 0.5, repeat: Infinity, ease: "easeInOut" },
-                  rotate: { duration: 5 + i * 0.5, repeat: Infinity, ease: "easeInOut" },
-                  opacity: { duration: 0.5, delay: i * 0.05 }
-                }}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100px] md:w-[180px] aspect-square rounded-[1rem] md:rounded-[1.2rem] overflow-hidden shadow-xl border-2 md:border-4 border-white"
-              >
-                <img src={item.url} alt="" className="w-full h-full object-cover" />
-              </motion.div>
-            ))}
-          </div>
+            {/* Mobile simplified spread */}
+            <div className="md:hidden flex flex-wrap justify-center gap-2 p-4 w-full h-full overflow-y-auto">
+              {GRID_ITEMS.slice(0, 8).map((item) => (
+                <div key={item.id} className="w-[80px] aspect-square rounded-xl overflow-hidden shadow-md border-2 border-white flex-shrink-0">
+                  <img src={item.url} alt="" className="w-full h-full object-cover" />
+                </div>
+              ))}
+            </div>
+            
+            {/* Desktop spread */}
+            <div className="hidden md:block relative w-full h-full">
+              {GRID_ITEMS.map((item, i) => (
+                <motion.div
+                  key={item.id}
+                  initial={{ x: 0, y: 0, scale: 0.5, opacity: 0, rotate: -20 }}
+                  animate={{
+                    x: (i - GRID_ITEMS.length / 2) * 20,
+                    y: [Math.sin(i * 1.5) * 40, (Math.sin(i * 1.5) * 40) + 10, Math.sin(i * 1.5) * 40],
+                    scale: 0.5,
+                    opacity: 1,
+                    rotate: [Math.random() * 6 - 3, (Math.random() * 6 - 3) + 2, Math.random() * 6 - 3]
+                  }}
+                  whileInView={{
+                    x: (i - GRID_ITEMS.length / 2) * 80,
+                    scale: 0.7,
+                  }}
+                  viewport={{ margin: "100px" }}
+                  transition={{
+                    x: { type: "spring", stiffness: 40, damping: 12, delay: i * 0.05 },
+                    y: { duration: 4 + i * 0.5, repeat: Infinity, ease: "easeInOut" },
+                    rotate: { duration: 5 + i * 0.5, repeat: Infinity, ease: "easeInOut" },
+                    opacity: { duration: 0.5, delay: i * 0.05 }
+                  }}
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[180px] aspect-square rounded-[1.2rem] overflow-hidden shadow-xl border-4 border-white"
+                >
+                  <img src={item.url} alt="" className="w-full h-full object-cover" />
+                </motion.div>
+              ))}
+            </div>
         ) : (
           <motion.div
             initial={{ opacity: 0 }}
@@ -230,7 +240,7 @@ const Hero: React.FC = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
         </svg>
       </motion.div>
-    </div>
+    </div >
   );
 };
 
