@@ -48,18 +48,10 @@ const GRID_ITEMS = [
 }));
 
 const Hero: React.FC = () => {
-  const [phase, setPhase] = useState<'intro' | 'ticker'>('intro');
   const [isPaused, setIsPaused] = useState(false);
   const { scrollY } = useScroll();
 
   const titleY = useTransform(scrollY, [0, 500], [0, -30]);
-  const bgOpacity = useTransform(scrollY, [0, 300], [0.1, 0]);
-
-  useEffect(() => {
-    // Transition from intro to ticker after animation completing
-    const timer = setTimeout(() => setPhase('ticker'), 3500);
-    return () => clearTimeout(timer);
-  }, []);
 
   const itemWidth = 240;
   const gap = 30;
@@ -69,34 +61,9 @@ const Hero: React.FC = () => {
 
   const colorCycle = ["#FFFFFF", "#E5E7EB", "#4B5563", "#000000", "#4B5563", "#E5E7EB", "#FFFFFF"];
 
-  const notes = ['♪', '♫', '∮', '♭', '♮', '♯', '♩', '♬'];
-
   return (
     <div className="relative min-h-screen bg-white flex flex-col items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.04)_0%,transparent_70%)] pointer-events-none" />
-
-      {/* Floating Notes Background */}
-      <motion.div
-        style={{ opacity: bgOpacity }}
-        className="absolute inset-0 pointer-events-none flex items-center justify-center"
-      >
-        {[...Array(10)].map((_, i) => (
-          <motion.div
-            key={i}
-            initial={{ scale: 0 }}
-            animate={{
-              scale: [0.8, 1.1, 0.8],
-              rotate: [0, 360],
-              x: [Math.cos(i * 36 * Math.PI / 180) * 300, Math.cos(i * 36 * Math.PI / 180) * 500],
-              y: [Math.sin(i * 36 * Math.PI / 180) * 300, Math.sin(i * 36 * Math.PI / 180) * 500],
-            }}
-            transition={{ duration: 15 + i, repeat: Infinity, ease: "linear" }}
-            className="absolute text-2xl font-serif text-blue-400/10"
-          >
-            {notes[i % notes.length]}
-          </motion.div>
-        ))}
-      </motion.div>
 
       <motion.div
         style={{ y: titleY }}
@@ -134,108 +101,33 @@ const Hero: React.FC = () => {
         </motion.div>
       </motion.div>
 
-      <div className="relative w-full h-[300px] md:h-[400px] flex items-center justify-center mb-12">
-        {phase === 'intro' ? (
-          <div className="relative w-full h-full flex items-center justify-center">
-            {/* Dynamic Spinning Notes morphing into Photos */}
-            {GRID_ITEMS.slice(0, 8).map((item, i) => {
-              const angle = (i / 8) * Math.PI * 2;
-              const radius = 220;
-              return (
-                <motion.div
-                  key={item.id}
-                  initial={{
-                    x: 0,
-                    y: 0,
-                    scale: 0,
-                    opacity: 0,
-                    rotate: -180
-                  }}
-                  animate={{
-                    // 1. Spinning in a circle then moving to individual positions
-                    x: [
-                      0,
-                      Math.cos(angle) * radius,
-                      Math.cos(angle + Math.PI * 4) * (radius * 1.2),
-                      (i - 3.5) * 150 // Align for ticker transition
-                    ],
-                    y: [
-                      0,
-                      Math.sin(angle) * radius,
-                      Math.sin(angle + Math.PI * 4) * (radius * 1.2),
-                      0
-                    ],
-                    scale: [0, 1.2, 1.1, 0.9],
-                    opacity: [0, 1, 1, 1],
-                    rotate: [0, 360, 720, 0]
-                  }}
-                  transition={{
-                    duration: 3.5,
-                    times: [0, 0.3, 0.7, 1],
-                    ease: "easeInOut"
-                  }}
-                  className="absolute w-[140px] md:w-[220px] aspect-[16/10] rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border-2 md:border-4 border-white z-10 bg-white"
-                >
-                  {/* The note that fades into the image */}
-                  <motion.div
-                    animate={{
-                      opacity: [1, 1, 0, 0],
-                      scale: [1, 1.2, 0.8, 0.5]
-                    }}
-                    transition={{ duration: 3.5, times: [0, 0.5, 0.65, 1] }}
-                    className="absolute inset-0 bg-blue-50/50 flex items-center justify-center text-4xl md:text-6xl font-serif text-blue-600 z-20"
-                  >
-                    {notes[i % notes.length]}
-                  </motion.div>
-                  <motion.img
-                    initial={{ opacity: 0, scale: 1.2 }}
-                    animate={{
-                      opacity: [0, 0, 1, 1],
-                      scale: [1.2, 1.2, 1, 1]
-                    }}
-                    transition={{ duration: 3.5, times: [0, 0.6, 0.7, 1] }}
-                    src={item.url}
-                    alt=""
-                    className="w-full h-full object-cover"
-                  />
-                </motion.div>
-              );
-            })}
-          </div>
-        ) : (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="relative w-full overflow-hidden py-4"
-          >
-            <motion.div
-              className="flex gap-4 md:gap-8 w-max"
-              initial={{ x: 0 }}
-              animate={isPaused ? {} : { x: -totalWidth }}
-              transition={{ duration: 37.5, repeat: Infinity, ease: "linear" }}
-              onMouseEnter={() => setIsPaused(true)}
-              onMouseLeave={() => setIsPaused(false)}
+      <div className="relative w-full overflow-hidden mb-12 py-4">
+        <motion.div
+          className="flex gap-4 md:gap-8 w-max"
+          initial={{ x: 0 }}
+          animate={isPaused ? {} : { x: -totalWidth }}
+          transition={{ duration: 37.5, repeat: Infinity, ease: "linear" }}
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          {duplicatedItems.map((item, index) => (
+            <motion.a
+              key={`${item.id}-${index}`}
+              href={YOUTUBE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ y: -10, scale: 1.1 }}
+              className="relative w-[180px] md:w-[240px] aspect-[16/10] bg-white rounded-[1.2rem] md:rounded-[1.8rem] overflow-hidden cursor-pointer shadow-md border border-neutral-100 flex-shrink-0 group"
             >
-              {duplicatedItems.map((item, index) => (
-                <motion.a
-                  key={`${item.id}-${index}`}
-                  href={YOUTUBE_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ y: -10, scale: 1.05 }}
-                  className="relative w-[180px] md:w-[240px] aspect-[16/10] bg-white rounded-[1.2rem] md:rounded-[1.8rem] overflow-hidden cursor-pointer shadow-md border border-neutral-100 flex-shrink-0 group"
-                >
-                  <img
-                    src={item.url}
-                    className="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-110"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                </motion.a>
-              ))}
-            </motion.div>
-          </motion.div>
-        )}
+              <img
+                src={item.url}
+                className="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-110"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            </motion.a>
+          ))}
+        </motion.div>
       </div>
 
       <motion.div
