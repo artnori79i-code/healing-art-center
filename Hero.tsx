@@ -138,12 +138,17 @@ const Hero: React.FC = () => {
                 key={item.id}
                 initial={{ x: 0, y: 0, scale: 0.5, opacity: 0, rotate: -20 }}
                 animate={{
-                  x: (i - GRID_ITEMS.length / 2) * (window.innerWidth < 768 ? 25 : 80),
+                  x: (i - GRID_ITEMS.length / 2) * 20,
                   y: [Math.sin(i * 1.5) * 40, (Math.sin(i * 1.5) * 40) + 10, Math.sin(i * 1.5) * 40],
-                  scale: (window.innerWidth < 768 ? 0.5 : 0.7),
+                  scale: 0.5,
                   opacity: 1,
                   rotate: [Math.random() * 6 - 3, (Math.random() * 6 - 3) + 2, Math.random() * 6 - 3]
                 }}
+                whileInView={{
+                  x: (i - GRID_ITEMS.length / 2) * 80,
+                  scale: 0.7,
+                }}
+                viewport={{ margin: "100px" }}
                 transition={{
                   x: { type: "spring", stiffness: 40, damping: 12, delay: i * 0.05 },
                   y: { duration: 4 + i * 0.5, repeat: Infinity, ease: "easeInOut" },

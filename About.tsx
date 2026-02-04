@@ -285,8 +285,8 @@ const About: React.FC = () => {
           className="relative mb-24 max-w-6xl mx-auto"
         >
           <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-start text-left">
-            <div className="space-y-6 md:space-y-8 md:pt-16 w-full lg:w-auto">
-              <div className="relative overflow-hidden rounded-[2rem] md:rounded-[3rem] shadow-2xl border border-white aspect-square md:aspect-square lg:aspect-[4/3] w-[85%] mx-auto md:w-full">
+            <div className="space-y-6 md:space-y-8 md:pt-16 w-full">
+              <div className="relative overflow-hidden rounded-[2rem] md:rounded-[3rem] shadow-2xl border border-white aspect-square md:aspect-square lg:aspect-[4/3] w-[90%] max-w-[320px] mx-auto md:w-full md:max-w-none">
                 <motion.img
                   animate={{
                     scale: [1, 1.1, 1],
@@ -311,12 +311,12 @@ const About: React.FC = () => {
                 onClick={() => setShowHistory(!showHistory)}
                 className="w-full flex items-center justify-between px-6 md:px-8 py-5 rounded-full bg-neutral-900 text-white hover:bg-blue-600 transition-all shadow-xl group"
               >
-                <span className="text-[9px] min-[380px]:text-[10px] md:text-[12px] font-black tracking-tight leading-tight md:tracking-[0.02em] uppercase whitespace-normal text-left pr-2 flex-grow">
-                  주요 활동 및 프로젝트 실적 <span className="hidden min-[420px]:inline">(클릭하여 상세 보기)</span>
+                <span className="text-[10px] md:text-[12px] font-black tracking-tight leading-tight md:tracking-[0.02em] uppercase whitespace-normal text-left flex-grow">
+                  주요 활동 및 프로젝트 실적 <span className="sm:inline">(클릭하여 상세 보기)</span>
                 </span>
                 <motion.div
                   animate={{ rotate: showHistory ? 180 : 0 }}
-                  className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0"
+                  className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 ml-2"
                 >
                   <svg className="w-3 h-3 md:w-4 md:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
@@ -374,7 +374,7 @@ const About: React.FC = () => {
               <div className="flex flex-col items-center md:sticky md:top-24">
                 <motion.div
                   style={{ rotate: profileRotate, y: profileY }}
-                  className="w-[80%] md:w-full aspect-[3.1/4] rounded-[2.5rem] overflow-hidden shadow-2xl border-white border-8 mb-8 group relative mx-auto"
+                  className="w-[85%] max-w-[280px] md:w-full md:max-w-none aspect-[3.1/4] rounded-[2.5rem] overflow-hidden shadow-2xl border-white border-8 mb-8 group relative mx-auto"
                 >
                   <motion.img
                     initial={{ scale: 1.2 }}
