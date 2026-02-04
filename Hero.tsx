@@ -48,7 +48,7 @@ const GRID_ITEMS = [
 }));
 
 const Hero: React.FC = () => {
-  const [phase, setPhase] = useState<'spread' | 'align'>('spread');
+  const [phase, setPhase] = useState<'intro' | 'ticker'>('intro');
   const [isPaused, setIsPaused] = useState(false);
   const { scrollY } = useScroll();
 
@@ -56,7 +56,8 @@ const Hero: React.FC = () => {
   const bgOpacity = useTransform(scrollY, [0, 300], [0.1, 0]);
 
   useEffect(() => {
-    const timer = setTimeout(() => setPhase('align'), 2000);
+    // Transition from intro to ticker after animation completing
+    const timer = setTimeout(() => setPhase('ticker'), 3500);
     return () => clearTimeout(timer);
   }, []);
 
@@ -68,10 +69,13 @@ const Hero: React.FC = () => {
 
   const colorCycle = ["#FFFFFF", "#E5E7EB", "#4B5563", "#000000", "#4B5563", "#E5E7EB", "#FFFFFF"];
 
+  const notes = ['♪', '♫', '∮', '♭', '♮', '♯', '♩', '♬'];
+
   return (
     <div className="relative min-h-screen bg-white flex flex-col items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.04)_0%,transparent_70%)] pointer-events-none" />
 
+      {/* Floating Notes Background */}
       <motion.div
         style={{ opacity: bgOpacity }}
         className="absolute inset-0 pointer-events-none flex items-center justify-center"
@@ -89,7 +93,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 15 + i, repeat: Infinity, ease: "linear" }}
             className="absolute text-2xl font-serif text-blue-400/10"
           >
-            {['♪', '♫', '∮', '♭', '♮', '♯'][i % 6]}
+            {notes[i % notes.length]}
           </motion.div>
         ))}
       </motion.div>
@@ -130,49 +134,74 @@ const Hero: React.FC = () => {
         </motion.div>
       </motion.div>
 
-      <div className="relative w-full h-[200px] md:h-[280px] flex items-center justify-center mb-12">
-        {phase === 'spread' ? (
-          <>
-            {/* Mobile simplified spread */}
-            <div className="md:hidden flex flex-wrap justify-center items-center gap-3 p-6 w-full h-auto min-h-[220px]">
-              {GRID_ITEMS.slice(0, 8).map((item) => (
-                <div key={item.id} className="w-[75px] aspect-square rounded-xl overflow-hidden shadow-md border-2 border-white shrink-0">
-                  <img src={item.url} alt="" className="w-full h-full object-cover" />
-                </div>
-              ))}
-            </div>
-
-            {/* Desktop spread */}
-            <div className="hidden md:block relative w-full h-full">
-              {GRID_ITEMS.map((item, i) => (
+      <div className="relative w-full h-[300px] md:h-[400px] flex items-center justify-center mb-12">
+        {phase === 'intro' ? (
+          <div className="relative w-full h-full flex items-center justify-center">
+            {/* Dynamic Spinning Notes morphing into Photos */}
+            {GRID_ITEMS.slice(0, 8).map((item, i) => {
+              const angle = (i / 8) * Math.PI * 2;
+              const radius = 220;
+              return (
                 <motion.div
                   key={item.id}
-                  initial={{ x: 0, y: 0, scale: 0.5, opacity: 0, rotate: -20 }}
+                  initial={{
+                    x: 0,
+                    y: 0,
+                    scale: 0,
+                    opacity: 0,
+                    rotate: -180
+                  }}
                   animate={{
-                    x: (i - GRID_ITEMS.length / 2) * 20,
-                    y: [Math.sin(i * 1.5) * 40, (Math.sin(i * 1.5) * 40) + 10, Math.sin(i * 1.5) * 40],
-                    scale: 0.5,
-                    opacity: 1,
-                    rotate: [Math.random() * 6 - 3, (Math.random() * 6 - 3) + 2, Math.random() * 6 - 3]
+                    // 1. Spinning in a circle then moving to individual positions
+                    x: [
+                      0,
+                      Math.cos(angle) * radius,
+                      Math.cos(angle + Math.PI * 4) * (radius * 1.2),
+                      (i - 3.5) * 150 // Align for ticker transition
+                    ],
+                    y: [
+                      0,
+                      Math.sin(angle) * radius,
+                      Math.sin(angle + Math.PI * 4) * (radius * 1.2),
+                      0
+                    ],
+                    scale: [0, 1.2, 1.1, 0.9],
+                    opacity: [0, 1, 1, 1],
+                    rotate: [0, 360, 720, 0]
                   }}
-                  whileInView={{
-                    x: (i - GRID_ITEMS.length / 2) * 80,
-                    scale: 0.7,
-                  }}
-                  viewport={{ margin: "100px" }}
                   transition={{
-                    x: { type: "spring", stiffness: 40, damping: 12, delay: i * 0.05 },
-                    y: { duration: 4 + i * 0.5, repeat: Infinity, ease: "easeInOut" },
-                    rotate: { duration: 5 + i * 0.5, repeat: Infinity, ease: "easeInOut" },
-                    opacity: { duration: 0.5, delay: i * 0.05 }
+                    duration: 3.5,
+                    times: [0, 0.3, 0.7, 1],
+                    ease: "easeInOut"
                   }}
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[180px] aspect-square rounded-[1.2rem] overflow-hidden shadow-xl border-4 border-white"
+                  className="absolute w-[140px] md:w-[220px] aspect-[16/10] rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border-2 md:border-4 border-white z-10 bg-white"
                 >
-                  <img src={item.url} alt="" className="w-full h-full object-cover" />
+                  {/* The note that fades into the image */}
+                  <motion.div
+                    animate={{
+                      opacity: [1, 1, 0, 0],
+                      scale: [1, 1.2, 0.8, 0.5]
+                    }}
+                    transition={{ duration: 3.5, times: [0, 0.5, 0.65, 1] }}
+                    className="absolute inset-0 bg-blue-50/50 flex items-center justify-center text-4xl md:text-6xl font-serif text-blue-600 z-20"
+                  >
+                    {notes[i % notes.length]}
+                  </motion.div>
+                  <motion.img
+                    initial={{ opacity: 0, scale: 1.2 }}
+                    animate={{
+                      opacity: [0, 0, 1, 1],
+                      scale: [1.2, 1.2, 1, 1]
+                    }}
+                    transition={{ duration: 3.5, times: [0, 0.6, 0.7, 1] }}
+                    src={item.url}
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
                 </motion.div>
-              ))}
-            </div>
-          </>
+              );
+            })}
+          </div>
         ) : (
           <motion.div
             initial={{ opacity: 0 }}
