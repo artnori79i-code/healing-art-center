@@ -117,6 +117,19 @@ const Footer: React.FC<FooterProps> = ({ onApplyClick }) => {
           <div className="flex gap-12">
             <a href="#" className="hover:text-neutral-800 transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-neutral-800 transition-colors">Terms of Service</a>
+            <button
+              onClick={() => {
+                const password = window.prompt("관리자 비밀번호를 입력하세요:");
+                if (password === "7979") { // 간단한 비밀번호 예시 (사용자가 수정 가능)
+                  window.open("https://analytics.naver.com/", "_blank");
+                } else if (password !== null) {
+                  alert("비밀번호가 일치하지 않습니다.");
+                }
+              }}
+              className="hover:text-neutral-800 transition-colors cursor-pointer"
+            >
+              Admin
+            </button>
           </div>
         </div>
       </div>
