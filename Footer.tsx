@@ -120,7 +120,8 @@ const Footer: React.FC<FooterProps> = ({ onApplyClick }) => {
             <button
               onClick={() => {
                 const password = window.prompt("관리자 비밀번호를 입력하세요:");
-                if (password === "794256") { // 업데이트된 관리자 비밀번호
+                const adminPass = (process.env as any).ADMIN_PASSWORD || "794256"; // 환경 변수 적용 (기본값 설정)
+                if (password === adminPass) {
                   window.open("https://analytics.naver.com/", "_blank");
                 } else if (password !== null) {
                   alert("비밀번호가 일치하지 않습니다.");
