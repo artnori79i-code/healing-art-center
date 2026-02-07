@@ -179,7 +179,7 @@ export const PROGRAMS: Program[] = [
         sessions: "12회기",
         participants: "15명 내외",
         content: "다채로운 악기의 음색으로 뇌를 깨우고, 잊혀진 기억의 편린들을 아름다운 선율 위에 다시 수놓습니다. 리듬에 맞춰 몸과 마음을 움직이며 고립감의 벽을 허물고, 서로의 하모니 속에서 활력을 되찾는 예술적 신경 자극 중심의 집단 예술 프로그램입니다.",
-        image: "/images/senior_program_healing_1.jpg"
+        image: "/images/senior_program_healing_1_v2.png"
       },
       {
         id: "s2",
