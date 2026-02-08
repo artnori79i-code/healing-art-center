@@ -25,7 +25,6 @@ const GRID_ITEMS = [
   { id: 16, url: "/images/hero_v7/h16.png" },
   { id: 17, url: "/images/hero_v7/h17.png" },
   { id: 18, url: "/images/hero_v7/h18.jpg" },
-  { id: 19, url: "/images/hero_v7/h19.png" },
   { id: 20, url: "/images/hero_v7/h20.png" },
   { id: 21, url: "/images/hero_v7/h21.png" },
   { id: 22, url: "/images/hero_v7/h22.png" },
