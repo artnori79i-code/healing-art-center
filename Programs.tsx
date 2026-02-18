@@ -252,8 +252,8 @@ const Programs: React.FC = () => {
                       <span className="inline-block px-3 py-1 rounded-full bg-white/20 text-white text-[10px] font-black mb-4 uppercase tracking-widest">Partner Story 02</span>
                       <h3 className="text-2xl md:text-4xl font-black mb-4 tracking-tighter leading-tight">고양시 관내 경로당 순회사업<br /><span className="text-orange-200">예술로 전하는 따뜻한 위로와 활력</span></h3>
                       <p className="text-white/80 text-sm md:text-lg font-medium leading-relaxed max-w-3xl">
-                        고양시 내 모든 경로당을 직접 찾아가 어르신들께 음악 중심의 문화예술교육과 예술치유를 선사했습니다.
-                        힐링예술터의 이성경 강사가 어르신들과 함께하며, 악기 연주와 신체 활동을 통해 소외된 이웃 없이 모두가 예술의 주인공이 되는 소중한 시간을 만들었습니다.
+                        고양시 노인종합복지관 관내 모든 경로당 문화예술교육 순회사업에서 힐링예술터-이성경 예술강사는 시니어 회원들께 음악 중심의 문화예술교육과 예술치유를 진행했습니다.
+                        힐링예술터의 이성경 예술강사가 어르신들과 함께하며, 악기 연주와 신체 활동을 통해 소외된 이웃 없이 모두가 예술의 주인공이 되는 소중한 시간을 만들었습니다.
                       </p>
                     </div>
 
