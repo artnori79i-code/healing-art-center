@@ -237,18 +237,59 @@ const Programs: React.FC = () => {
             >
               <button
                 onClick={() => setSelectedPartnerIndex(null)}
-                className="absolute top-6 right-6 z-10 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors font-bold"
+                className="absolute top-6 right-6 z-20 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors font-bold"
               >
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
-              <div className="overflow-y-auto p-4 md:p-8">
-                <img
-                  src="/images/partner_article_1.png"
-                  alt="협업기관 뉴스 기사"
-                  className="w-full h-auto rounded-xl"
-                />
+
+              <div className="overflow-y-auto">
+                {selectedPartnerIndex === 1 ? (
+                  <div className="flex flex-col">
+                    {/* Goyang-si Custom Header */}
+                    <div className="bg-orange-600 p-8 md:p-12 text-white">
+                      <span className="inline-block px-3 py-1 rounded-full bg-white/20 text-white text-[10px] font-black mb-4 uppercase tracking-widest">Partner Story 02</span>
+                      <h3 className="text-2xl md:text-4xl font-black mb-4 tracking-tighter leading-tight">고양시 관내 경로당 순회사업<br /><span className="text-orange-200">예술로 전하는 따뜻한 위로와 활력</span></h3>
+                      <p className="text-white/80 text-sm md:text-lg font-medium leading-relaxed max-w-3xl">
+                        고양시 내 모든 경로당을 직접 찾아가 어르신들께 음악 중심의 문화예술교육과 예술치유를 선사했습니다.
+                        힐링예술터의 이성경 강사가 어르신들과 함께하며, 악기 연주와 신체 활동을 통해 소외된 이웃 없이 모두가 예술의 주인공이 되는 소중한 시간을 만들었습니다.
+                      </p>
+                    </div>
+
+                    {/* Goyang-si Activity Gallery */}
+                    <div className="p-6 md:p-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 bg-neutral-50">
+                      {[1, 2, 3].map((num) => (
+                        <motion.div
+                          key={num}
+                          whileHover={{ y: -8 }}
+                          className="rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-white aspect-[4/3]"
+                        >
+                          <img
+                            src={`/images/goyang_${num}.png`}
+                            alt={`Goyang Activity ${num}`}
+                            className="w-full h-full object-cover"
+                          />
+                        </motion.div>
+                      ))}
+                    </div>
+
+                    <div className="p-8 md:p-12 border-t border-neutral-100 bg-white">
+                      <div className="flex items-center gap-4 text-orange-600">
+                        <div className="w-12 h-[2px] bg-orange-600"></div>
+                        <span className="font-black text-sm uppercase tracking-widest">Together with Goyang-si</span>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="p-4 md:p-8">
+                    <img
+                      src="/images/partner_article_1.png"
+                      alt="협업기관 뉴스 기사"
+                      className="w-full h-auto rounded-xl"
+                    />
+                  </div>
+                )}
               </div>
             </motion.div>
           </div>
