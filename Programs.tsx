@@ -5,6 +5,7 @@ import { PROGRAMS } from './constants';
 
 const Programs: React.FC = () => {
   const [selectedProgramId, setSelectedProgramId] = useState<number | null>(null);
+  const [selectedPartnerIndex, setSelectedPartnerIndex] = useState<number | null>(null);
 
   const selectedProgram = PROGRAMS.find(p => p.id === selectedProgramId);
 
@@ -137,10 +138,25 @@ const Programs: React.FC = () => {
                     {selectedProgram.partners.map((partner, idx) => (
                       <motion.button
                         key={idx}
+                        onClick={() => setSelectedPartnerIndex(idx)}
                         whileHover={{ scale: 1.05, backgroundColor: 'rgba(255, 255, 255, 0.3)' }}
                         whileTap={{ scale: 0.95 }}
-                        className="px-5 py-2.5 bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl text-[10px] md:text-xs font-black text-white shadow-xl flex items-center gap-2 group/btn transition-all"
+                        className="relative overflow-hidden px-5 py-2.5 bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl text-[10px] md:text-xs font-black text-white shadow-xl flex items-center gap-2 group/btn transition-all"
                       >
+                        {/* Shimmer/Sparkle Effect */}
+                        <motion.div
+                          animate={{
+                            x: ['-100%', '200%'],
+                          }}
+                          transition={{
+                            duration: 2,
+                            repeat: Infinity,
+                            ease: "linear",
+                            repeatDelay: 1
+                          }}
+                          className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-12 pointer-events-none"
+                        />
+
                         <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
                         협업기관 {idx + 1}. {partner}
                       </motion.button>
@@ -200,6 +216,39 @@ const Programs: React.FC = () => {
                     </motion.div>
                   ))}
                 </div>
+              </div>
+            </motion.div>
+          </div>
+        )}
+        {selectedPartnerIndex !== null && (
+          <div className="fixed inset-0 z-[200] flex items-center justify-center p-4 md:p-12">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setSelectedPartnerIndex(null)}
+              className="absolute inset-0 bg-black/90 backdrop-blur-xl"
+            />
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: 20 }}
+              className="relative max-w-5xl w-full bg-white rounded-[2rem] overflow-hidden shadow-2xl flex flex-col max-h-[90vh]"
+            >
+              <button
+                onClick={() => setSelectedPartnerIndex(null)}
+                className="absolute top-6 right-6 z-10 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors font-bold"
+              >
+                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+              <div className="overflow-y-auto p-4 md:p-8">
+                <img
+                  src="/images/partner_article_1.png"
+                  alt="협업기관 뉴스 기사"
+                  className="w-full h-auto rounded-xl"
+                />
               </div>
             </motion.div>
           </div>
