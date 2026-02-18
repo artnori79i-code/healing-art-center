@@ -26,6 +26,7 @@ export interface Program {
   image: string;
   color: string;
   subPrograms?: SubProgram[];
+  partners?: string[];
 }
 
 export interface FloatingImage {
