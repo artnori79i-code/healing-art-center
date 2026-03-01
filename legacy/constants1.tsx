@@ -1,8 +1,8 @@
 import { Review, Program } from './types';
 
 export const REVIEWS: Review[] = [
-  { id: 1, name: "김지훈", role: "육군 정훈장교", program: "전우의 달빛 소나타", content: "정훈장교로서 장병들이 음악으로 소통하는 모습에 큰 감명을 받았습니다. 전우애가 선율로 피어나는 시간이었어요.", image: "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?q=80&w=400&h=400&auto=format&fit=crop" },
-  { id: 2, name: "이아름", role: "공군 대위", program: "하늘 위의 아르페지오", content: "조종사들에게 필요한 정서적 안정을 음악 합주를 통해 찾았습니다. 팀워크의 본질을 예술로 배웠습니다.", image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=400&h=400&auto=format&fit=crop" }
+  { id: 1, name: "김**", role: "육군 정훈장교", program: "전우의 달빛 소나타", content: "정훈장교로서 장병들이 음악으로 소통하는 모습에 큰 감명을 받았습니다. 전우애가 선율로 피어나는 시간이었어요.", image: "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?q=80&w=400&h=400&auto=format&fit=crop" },
+  { id: 2, name: "이**", role: "공군 대위", program: "하늘 위의 아르페지오", content: "조종사들에게 필요한 정서적 안정을 음악 합주를 통해 찾았습니다. 팀워크의 본질을 예술로 배웠습니다.", image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=400&h=400&auto=format&fit=crop" }
 ];
 
 export const PROGRAMS: Program[] = [
