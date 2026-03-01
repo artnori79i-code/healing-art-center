@@ -433,7 +433,7 @@ const About: React.FC = () => {
                     <li>• 연세대학교 신학과 졸업</li>
                     <li className="font-bold text-neutral-800">• 前) 국방부 문화예술교육 기획/운영/연구</li>
                     <li className="font-bold text-neutral-800">• 前) 서울디지털대학교 음악치료교육 반주법 교수</li>
-                    <li>• 前) 이화여자대학교 예술교육연구소 연구원</li>
+                    <li>• 前) 이화여자대학교 예술교육치료연구소 연구원</li>
                   </ul>
                 </div>
 
