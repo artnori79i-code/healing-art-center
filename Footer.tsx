@@ -98,7 +98,7 @@ const Footer: React.FC<FooterProps> = ({ onApplyClick }) => {
             </motion.a>
             <motion.a
               whileHover={{ y: -5, scale: 1.05 }}
-              href="kakaotalk://addfriend?id=sksksk0916"
+              href="http://pf.kakao.com/_FpiKX"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 rounded-2xl bg-blue-500 text-white hover:bg-blue-600 transition-all font-bold shadow-lg text-xs tracking-widest uppercase"
@@ -134,7 +134,7 @@ const Footer: React.FC<FooterProps> = ({ onApplyClick }) => {
           </div>
         </div>
       </div>
-    </footer>
+    </footer >
   );
 };
 
