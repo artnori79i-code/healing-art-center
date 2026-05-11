@@ -3,7 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const YOUTUBE_URL = "https://www.youtube.com/@healingmusic6179/videos";
-const KAKAO_URL = "https://invite.kakao.com/tc/yBbJA8619b";
+const KAKAO_URL = "kakaotalk://addfriend?id=sksksk0916";
 const BLOG_URL = "https://blog.naver.com/healingarter";
 
 const INSIGHT_DATA = [
@@ -29,7 +29,7 @@ const INSIGHT_DATA = [
     type: 'KAKAO',
     label: 'KAKAOTALK',
     title: '실시간 카카오톡 상담',
-    desc: '1:1 문의를 통해 언제든 편하게 소통하세요.',
+    desc: '카카오톡(ID: sksksk0916) 추가를 통해 언제든 편하게 소통하세요.',
     url: KAKAO_URL,
     image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=600&auto=format&fit=crop',
     linkText: 'KAKAO'

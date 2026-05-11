@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 const YOUTUBE_URL = "https://www.youtube.com/@healingmusic6179/videos";
-const KAKAO_URL = "https://invite.kakao.com/tc/yBbJA8619b";
+const KAKAO_URL = "kakaotalk://addfriend?id=sksksk0916";
 const BLOG_URL = "https://blog.naver.com/healingarter";
 
 const GRID_ITEMS = [
