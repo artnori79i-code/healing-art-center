@@ -96,15 +96,24 @@ const Footer: React.FC<FooterProps> = ({ onApplyClick }) => {
             >
               YouTube
             </motion.a>
-            <motion.a
-              whileHover={{ y: -5, scale: 1.05 }}
-              href="http://pf.kakao.com/_FpiKX"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 rounded-2xl bg-blue-500 text-white hover:bg-blue-600 transition-all font-bold shadow-lg text-xs tracking-widest uppercase"
-            >
-              KAKAO TALK
-            </motion.a>
+            <div className="flex items-center gap-3 bg-neutral-50 px-2 py-2 rounded-3xl border border-neutral-100 shadow-sm ml-0 md:ml-2">
+              <motion.a
+                whileHover={{ y: -2, scale: 1.02 }}
+                href="http://pf.kakao.com/_FpiKX/chat"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-3.5 rounded-2xl bg-blue-500 text-white hover:bg-blue-600 transition-all font-bold shadow-lg text-xs tracking-widest uppercase flex items-center h-full"
+              >
+                KAKAO TALK
+              </motion.a>
+              <img
+                src="/images/kakao_qr.png"
+                alt="Kakao QR"
+                className="w-12 h-12 rounded-xl bg-white shadow-sm border border-neutral-200 p-0.5 pointer-events-none"
+                onError={(e) => { e.currentTarget.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://pf.kakao.com/_FpiKX/chat"; }}
+                title="스마트폰으로 스캔하여 채팅 바로가기"
+              />
+            </div>
           </div>
         </div>
 
