@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 const YOUTUBE_URL = "https://www.youtube.com/@healingmusic6179/videos";
-const KAKAO_URL = "http://pf.kakao.com/_FpiKX";
+const KAKAO_URL = "http://pf.kakao.com/_FpiKX/chat";
 const BLOG_URL = "https://blog.naver.com/healingarter";
 
 const GRID_ITEMS = [
@@ -140,16 +140,26 @@ const Hero: React.FC = () => {
           { label: "Blog", url: BLOG_URL, color: "bg-[#03C75A] text-white hover:bg-[#02a94d]" },
           { label: "Kakao", url: KAKAO_URL, color: "bg-[#FEE500] text-[#3A1D1D] hover:bg-[#e6ce00]" }
         ].map((btn, i) => (
-          <motion.a
-            key={i}
-            href={btn.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.05, y: -2 }}
-            className={`px-4 md:px-8 py-2.5 md:py-3 rounded-full text-[10px] md:text-[11px] font-black tracking-widest uppercase transition-all shadow-sm font-gothic ${btn.color}`}
-          >
-            {btn.label}
-          </motion.a>
+          <div key={i} className="flex items-center gap-2">
+            <motion.a
+              href={btn.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05, y: -2 }}
+              className={`px-4 md:px-8 py-2.5 md:py-3 rounded-full text-[10px] md:text-[11px] font-black tracking-widest uppercase transition-all shadow-sm font-gothic ${btn.color}`}
+            >
+              {btn.label}
+            </motion.a>
+            {btn.label === "Kakao" && (
+              <img
+                src="/images/kakao_qr.png"
+                alt="Kakao QR"
+                className="w-10 h-10 md:w-11 md:h-11 rounded-lg shadow-sm border border-neutral-100 bg-white p-0.5"
+                onError={(e) => { e.currentTarget.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://pf.kakao.com/_FpiKX/chat"; }}
+                title="스마트폰으로 스캔하여 채널홈 접속"
+              />
+            )}
+          </div>
         ))}
       </motion.div>
 

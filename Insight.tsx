@@ -105,18 +105,28 @@ const Insight: React.FC = () => {
                   {item.desc}
                 </p>
 
-                <div className="flex items-center gap-2 group/link">
-                  <span className="text-[11px] font-black text-neutral-800 tracking-widest uppercase border-b-2 border-neutral-100 group-hover/link:border-blue-600 transition-all font-gothic pb-1">
-                    {item.linkText}
-                  </span>
-                  <motion.div
-                    animate={{ x: [0, 5, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
-                  >
-                    <svg className="w-4 h-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </motion.div>
+                <div className="flex items-center justify-between w-full group/link pt-2">
+                  <div className="flex items-center gap-2">
+                    <span className="text-[11px] font-black text-neutral-800 tracking-widest uppercase border-b-2 border-neutral-100 group-hover/link:border-blue-600 transition-all font-gothic pb-1">
+                      {item.linkText}
+                    </span>
+                    <motion.div
+                      animate={{ x: [0, 5, 0] }}
+                      transition={{ duration: 1.5, repeat: Infinity }}
+                    >
+                      <svg className="w-4 h-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                    </motion.div>
+                  </div>
+                  {item.type === 'KAKAO' && (
+                    <img
+                      src="/images/kakao_qr.png"
+                      alt="Kakao QR"
+                      className="w-10 h-10 rounded-md shadow-sm border border-neutral-100 bg-white p-0.5 pointer-events-none"
+                      onError={(e) => { e.currentTarget.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://pf.kakao.com/_FpiKX/chat"; }}
+                    />
+                  )}
                 </div>
               </div>
             </motion.a>
